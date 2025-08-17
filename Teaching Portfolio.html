@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohini Pather's Teaching Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Assuming Chart.js is loaded externally -->
+    <script src="script.js"></script>
+    <!-- Add Font Awesome if used in CSS/icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+    <img src="https://www.icmeh.org/wp-content/uploads/2022/11/ICMEH-Miss-Mohini-Pather.jpg" alt="Mohini Pather - Professional Photo" class="profile-pic">
+        <h1>Mohini Pather's Teaching Portfolio</h1>
+        <h2>Teaching Philosophy & Excellence Timeline</h2>
+        <p>
+            My teaching philosophy is rooted in fostering an inclusive, dynamic, and empowering learning environment. 
+            I believe in leveraging technology to break down barriers and make learning accessible to all students. 
+            By integrating the Mario Effect, I encourage grit and resilience, helping students embrace challenges 
+            as opportunities for growth. Central to my approach is the belief that education is a collaborative journey, 
+            where students are co-creators of knowledge, empowered to think holistically, advocate for themselves and others, 
+            and contribute meaningfully to nation-building.
+        </p>
+        <ul class="philosophy-principles">
+            <li><i class="fas fa-hands-helping"></i> Co-creation</li>
+            <li><i class="fas fa-brain"></i> Holistic thinking</li>
+            <li><i class="fas fa-bullhorn"></i> Advocacy</li>
+            <li><i class="fas fa-globe-africa"></i> Nation-building</li>
+            <li><i class="fas fa-fist-raised"></i> Grit</li>
+            <li><i class="fas fa-rocket"></i> Empowerment</li>
+        </ul>
+    </header>
+
+    <section class="performance-section">
+        <h2>Performance Overview (2020-2024)</h2>
+        <div class="content-card" style="max-width:1200px; margin: 40px auto 0 auto;">
+            <!-- Example: If you have summary tables outside timeline, wrap them here. If not, remove this block. -->
+            <!-- Place any summary tables here if needed. -->
+        </div>
+        <div class="charts-container">
+            <div class="chart-wrapper">
+                <h3>Success Rate & Student Numbers</h3>
+                <canvas id="successChart"></canvas>
+            </div>
+            <div class="chart-wrapper">
+                <h3>Research Performance</h3>
+                <canvas id="researchChart"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <section class="timeline-section">
+        <h2>Timeline of Teaching Excellence (2020-2025)</h2>
+        <div class="timeline-container">
+            <div class="timeline-line"></div>
+
+            <div class="year-entry">
+                <div class="year-marker">2020</div>
+                <!-- ...existing code... -->
+                <div class="year-content">
+                <!-- ...existing code... -->
+                    <div class="content-card">
+                        <h3>Innovations & Achievements</h3>
+                        <ul class="innovations-list">
+                            <li>Created Academic Intelligence System using Power BI</li>
+                            <li>Developed automated academic counseling documentation</li>
+                            <li>Created automated paperless registration system during COVID</li>
+                            <li>Applied humor and trending events to theory application</li>
+                        </ul>
+                        <h4>Module Performance:</h4>
+                        <table class="performance-table">
+                            <thead>
+                                <tr><th>Module</th><th>Success Rate</th><th>Qualification</th><th>SET Avg (out of 5)</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Business Management 3A</td><td>100%</td><td>Bachelor of Commerce</td><td>5</td></tr>
+                                <tr><td>Business Management 3B</td><td>94%</td><td>Bachelor of Commerce</td><td>4.7</td></tr>
+                            </tbody>
+                        </table>
+                        <div class="achievement-badges">
+                            <span class="badge award"><i class="fas fa-award"></i> Emerging Researcher</span>
+                            <span class="badge success"><i class="fas fa-trophy"></i> Top Module Success Rate Nationally</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="student-quotes">
+                <div class="toggle-indicator">Click to view Alignment or Reflection</div>
+                    <div class="speech-bubble positive"><i class="fas fa-quote-left"></i>"She makes business interesting to learn by connecting with the class."</div>
+                    <div class="speech-bubble positive"><i class="fas fa-quote-left"></i>"The lecturer explains concepts well making it easy to understand and explains the module in relation to the real world of business."</div>
+                    <div class="speech-bubble positive"><i class="fas fa-quote-left"></i>"My business lecturer is the best, she applies the work to real life scenarios."</div>
+                    <div class="speech-bubble constructive"><i class="fas fa-lightbulb"></i>"Focus on theory alongside real-world applications."</div>
+                </div>
+                <div class="alignment-container">
+                    <h3 style="margin-top: 2.5rem; margin-bottom: 1rem; padding-top: 1.5rem;">Criterion 1: Constructive Alignment</h3>
+                    <table style="width:100%; border-collapse:collapse; margin-bottom:2.5rem;">
+                        <tr style="background:#4777C3; color:white;">
+                            <th style="padding:10px;">Aspect</th>
+                            <th style="padding:10px;">Evidence</th>
+                            <th style="padding:10px;">Reflection</th>
+                            <th style="padding:10px;">Commentary</th>
+                        </tr>
+                        <tr>
+                            <td style="padding:10px;">Clear articulation of learning outcomes</td>
+                            <td style="padding:10px;">Online modules and video lectures defined outcomes for remote learning.</td>
+                            <td style="padding:10px;">Measured via quizzes and assignments, aligned to new online standards.</td>
+                            <td style="padding:10px;">Student-centered, flexible for remote context.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:10px;">Aligned teaching activities</td>
+                            <td style="padding:10px;">Interactive quizzes, video lectures, and online discussions.</td>
+                            <td style="padding:10px;">Increased engagement and participation online.</td>
+                            <td style="padding:10px;">Active learning despite remote challenges.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:10px;">Assessment AS learning</td>
+                            <td style="padding:10px;">Frequent online quizzes and feedback.</td>
+                            <td style="padding:10px;">Helped students self-assess and improve.</td>
+                            <td style="padding:10px;">Continuous, adaptive feedback loop.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:10px;">Evidence of student engagement and motivation</td>
+                            <td style="padding:10px;">High quiz participation and positive feedback.</td>
+                            <td style="padding:10px;">Students adapted well to online learning.</td>
+                            <td style="padding:10px;">Engagement maintained through innovation.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:10px;">Data-driven curriculum improvement</td>
+                            <td style="padding:10px;">Quiz and assignment data informed teaching adjustments.</td>
+                            <td style="padding:10px;">Improved outcomes over the year.</td>
+                            <td style="padding:10px;">Iterative, responsive teaching.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:10px;">Integration with institutional goals</td>
+                            <td style="padding:10px;">Online transition aligned with university COVID response.</td>
+                            <td style="padding:10px;">Supported institutional resilience.</td>
+                            <td style="padding:10px;">Model for future digital transformation.</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="reflection-bubble">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <h4>2020 Reflection</h4>
+                    <p>"The challenges of remote learning during COVID-19 highlighted the importance of technology and early intervention. 
+                    These lessons shaped a more resilient, inclusive, and data-driven approach for the following year."</p>
+                </div>
+            </div>
+
+            <div class="year-entry">
+                <div class="year-marker" style="margin-bottom: 20px;">2021</div>
+                <div class="year-content">
+                    <div class="content-card">
+                        <h3>Continued Excellence & Growth</h3>
+                        <ul class="innovations-list">
+                            <li>Enhanced Academic Intelligence System with predictive analytics</li>
+                            <li>Implemented early intervention strategies based on data insights</li>
+                            <li>Developed comprehensive student support frameworks</li>
+                            <li>Integrated gamification elements inspired by the Mario Effect</li>
+                        </ul>
+                        <h4>Module Performance:</h4>
+                        <table class="performance-table">
+                            <thead>
+                                <tr><th>Module</th><th>Success Rate</th><th>Qualification</th><th>SET Result</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Business Management 3A</td><td>100%</td><td>Bachelor of Commerce</td><td>5</td></tr>
+                                <tr><td>Business Management 3B</td><td>93%</td><td>Bachelor of Commerce</td><td>4.7</td></tr>
+                            </tbody>
+                        </table>
+                        <div class="achievement-badges">
+                            <span class="badge success"><i class="fas fa-chart-line"></i> Consistent High Performance</span>
+                            <span class="badge award"><i class="fas fa-lightbulb"></i> Top Module Success Rate Nationally for Business Management</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="student-quotes">
+                    <div class="toggle-indicator">Click to view Alignment or Reflection</div>
+                    <div class="speech-bubble positive"><i class="fas fa-quote-left"></i>"Her teaching methods make complex concepts easy to understand."</div>
+                    <div class="speech-bubble positive"><i class="fas fa-quote-left"></i>"She creates an environment where we feel comfortable to ask questions and participate."</div>
+                    <div class="speech-bubble positive"><i class="fas fa-quote-left"></i>"The use of technology and real-world examples keeps us engaged throughout the lessons."</div>
+                    <div class="speech-bubble constructive"><i class="fas fa-lightbulb"></i>"More time for practical exercises would be beneficial."</div>
+                </div>
+                <div class="alignment-container">
+                    <h3 style="margin-top: 2.5rem; margin-bottom: 1rem; padding-top: 1.5rem;">Criterion 1: Constructive Alignment</h3>
+                    <table style="width:100%; border-collapse:collapse; margin-bottom:2.5rem;">
+                        <tr style="background:#4777C3; color:white;">
+                            <th style="padding:10px;">Aspect</th>
+                            <th style="padding:10px;">Evidence</th>
+                            <th style="padding:10px;">Reflection</th>
+                            <th style="padding:10px;">Commentary</th>
+                        </tr>
+                        <tr>
+                            <td style="padding:10px;">Clear articulation of learning outcomes</td>
+                            <td style="padding:10px;">Plagiarism system outcomes focused on integrity and rehabilitation.</td>
+                            <td style="padding:10px;">Linked to ethical business practices in NQF.</td>
+                            <td style="padding:10px;">Measurable ethical goals.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:10px;">Aligned teaching activities</td>
+                            <td style="padding:10px;">Automated rehabilitation efforts with humor for accessibility.</td>
+                            <td style="padding:10px;">Built grit through fair policy application.</td>
+                            <td style="padding:10px;">Equitable and inclusive.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:10px;">Assessment AS learning</td>
+                            <td style="padding:10px;">System provided feedback on integrity breaches.</td>
+                            <td style="padding:10px;">Encouraged self-reflection and improvement.</td>
+                            <td style="padding:10px;">Constructive feedback loops.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:10px;">Evidence of student engagement and motivation</td>
+                            <td style="padding:10px;">High success rates despite challenges.</td>
+                            <td style="padding:10px;">Motivation via transparent processes.</td>
+                            <td style="padding:10px;">Reduced incidents, increased trust.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:10px;">Data-driven curriculum improvement</td>
+                            <td style="padding:10px;">Plagiarism data informed policy refinements.</td>
+                            <td style="padding:10px;">Iterative updates for better outcomes.</td>
+                            <td style="padding:10px;">Evidence-based adjustments.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:10px;">Integration with institutional goals</td>
+                            <td style="padding:10px;">Promoted academic integrity culture.</td>
+                            <td style="padding:10px;">Aligned with Advocacy and Empowerment.</td>
+                            <td style="padding:10px;">Institutional alignment strong.</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="reflection-bubble">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <h4>2021 Reflection</h4>
+                    <p>"Building on 2020's foundation, this year focused on refining data-driven approaches and enhancing student engagement. 
+                    The integration of predictive analytics began showing promising results in early intervention strategies."</p>
+                </div>
+            </div>
+
+            <div class="year-entry">
+                <div class="year-marker" style="margin-bottom: 20px;">2022</div>
+                <div class="year-content">
+                    <div class="content-card">
+                        <h3>Research Integration & Expansion</h3>
+                        <ul class="innovations-list">
+                            <li>Created automated process using Microsoft Forms and Power Automate to assist students in generating research elements (topic, abstract, background), encouraging critical analysis.</li>
+                            <li>Set up AI sentiment tracker for research-related emails via Teams chatbot for targeted guidance.</li>
+                            <li>Presented at 4 international conferences, winning Best Presenter Award.</li>
+                        </ul>
+                        <h4>Module Performance:</h4>
+                        <table class="performance-table">
+                            <thead>
+                                <tr><th>Module</th><th>Success Rate</th><th>Qualification</th><th>SET Result</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Business Management 3B</td><td>95%</td><td>Bachelor of Commerce</td><td>4.8</td></tr>
+                                <tr><td>Research Practice</td><td>97%</td><td>Bachelor of Commerce</td><td>4.6</td></tr>
+                            </tbody>
+                        </table>
+                        <div class="achievement-badges">
+                            <span class="badge award"><i class="fas fa-flask"></i> Top Module Success Rate Nationally</span>
+                            <span class="badge success"><i class="fas fa-users"></i> Top Researcher Award</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="student-quotes">
+                    <div class="toggle-indicator">Click to view Alignment or Reflection</div>
+                    <div class="speech-bubble positive"><i class="fas fa-quote-left"></i>"She challenges us to think critically and apply concepts creatively."</div>
+                    <div class="speech-bubble positive"><i class="fas fa-quote-left"></i>"The collaborative learning approach helps us learn from each other."</div>
+                    <div class="speech-bubble positive"><i class="fas fa-quote-left"></i>"Fair assessment methods that truly reflect our understanding."</div>
+                    <div class="speech-bubble constructive"><i class="fas fa-lightbulb"></i>"More diverse reading materials would enhance our perspective."</div>
+                </div>
+                <div class="alignment-container">
+                    <h3 style="margin-top: 2.5rem; margin-bottom: 1rem; padding-top: 1.5rem;">Criterion 1: Constructive Alignment</h3>
+                    <table style="width:100%; border-collapse:collapse; margin-bottom:2.5rem;">
+                        <tr style="background:#4777C3; color:white;">
+                            <th style="padding:10px;">Aspect</th>
+                            <th style="padding:10px;">Evidence</th>
+                            <th style="padding:10px;">Reflection</th>
+                            <th style="padding:10px;">Commentary</th>
+                        </tr>
+                        <tr>
+                            <td style="padding:10px;">Clear articulation of learning outcomes</td>
+                            <td style="padding:10px;">Research outcomes integrated into module objectives.</td>
+                            <td style="padding:10px;">Students understood research's role in learning.</td>
+                            <td style="padding:10px;">Bridged research and teaching.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:10px;">Aligned teaching activities</td>
+                            <td style="padding:10px;">Research projects and presentations.</td>
+                            <td style="padding:10px;">Increased student ownership of learning.</td>
+                            <td style="padding:10px;">Active, inquiry-based learning.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:10px;">Assessment AS learning</td>
+                            <td style="padding:10px;">Research presentations and peer feedback.</td>
+                            <td style="padding:10px;">Students learned from each other.</td>
+                            <td style="padding:10px;">Collaborative assessment.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:10px;">Evidence of student engagement and motivation</td>
+                            <td style="padding:10px;">High participation in research activities.</td>
+                            <td style="padding:10px;">Students motivated by real-world impact.</td>
+                            <td style="padding:10px;">Engagement through relevance.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:10px;">Data-driven curriculum improvement</td>
+                            <td style="padding:10px;">Research data used to refine modules.</td>
+                            <td style="padding:10px;">Continuous improvement based on evidence.</td>
+                            <td style="padding:10px;">Research-informed teaching.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:10px;">Integration with institutional goals</td>
+                            <td style="padding:10px;">Research aligned with institutional priorities.</td>
+                            <td style="padding:10px;">Supported university's research mission.</td>
+                            <td style="padding:10px;">Strengthened institutional reputation.</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="reflection-bubble">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <h4>2022 Reflection</h4>
+                    <p>"The integration of research activities with teaching practice marked a significant milestone. 
+                    This year demonstrated how academic inquiry can directly enhance classroom effectiveness and student outcomes."</p>
+                </div>
+            </div>
+
+            <div class="year-entry even">
+                <div class="year-marker" style="margin-bottom: 20px;">2023</div>
+                <div class="year-content">
+                    <div class="content-card">
+                        <h3>Scaling Impact & Leadership</h3>
+                        <ul class="innovations-list">
+                            <li>Mentored junior faculty in innovative teaching methods</li>
+                            <li>Developed institution-wide academic support systems</li>
+                            <li>Led workshops on technology integration in education</li>
+                            <li>Took over Trading/Investment Challenge to inspire practical application outside curriculum.</li>
+                        </ul>
+                        <h4>Module Performance:</h4>
+                        <table class="performance-table">
+                            <thead>
+                                <tr><th>Module</th><th>Success Rate</th><th>Qualification</th><th>SET Result</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Accounting Software</td><td>76%</td><td>Higher Certificate in Business Principles and Practice</td><td>4.3</td></tr>
+                                <tr><td>Business Management 3A</td><td>94%</td><td>Bachelor of Commerce</td><td>5</td></tr>
+                                <tr><td>Business Management 3B</td><td>100%</td><td>Bachelor of Commerce</td><td>4.7</td></tr>
+                                <tr><td>Introduction to Quantitative Thinking and Techniques</td><td>79%</td><td>Higher Certificate in Business Principles and Practice</td><td>4.6</td></tr>
+                                <tr><td>Retail Management</td><td>92%</td><td>Bachelor of Commerce</td><td>4.6</td></tr>
+                            </tbody>
+                        </table>
+                        <div class="achievement-badges">
+                            <span class="badge award"><i class="fas fa-flask"></i> Research Points: 2</span>
+                            <span class="badge success"><i class="fas fa-user-tie"></i> Top Module Success Rate Nationally</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="student-quotes">
+                    <div class="toggle-indicator">Click to view Alignment or Reflection</div>
+                    <div class="speech-bubble positive"><i class="fas fa-quote-left"></i>"She guides us to become independent learners and critical thinkers."</div>
+                    <div class="speech-bubble positive"><i class="fas fa-quote-left"></i>"Her global perspective on business helps us understand diverse markets."</div>
+                    <div class="speech-bubble positive"><i class="fas fa-quote-left"></i>"She advocates for student success and creates supportive learning environments."</div>
+                    <div class="speech-bubble constructive"><i class="fas fa-lightbulb"></i>"sometimes Mohini is a bit fast and I do feel like I’m a bit behind and it’s a bit hard to ask her to slow down because it seems like everyone else in the class understands and I’ll be holding everyone back"</div>
+                </div>
+                <div class="alignment-container">
+                    <h3 style="margin-top: 2.5rem; margin-bottom: 1rem; padding-top: 1.5rem;">Criterion 1: Constructive Alignment</h3>
+                    <table style="width:100%; border-collapse:collapse; margin-bottom:2.5rem;">
+                        <tr style="background:#4777C3; color:white;">
+                            <th style="padding:10px;">Aspect</th>
+                            <th style="padding:10px;">Evidence</th>
+                            <th style="padding:10px;">Reflection</th>
+                            <th style="padding:10px;">Commentary</th>
+                        </tr>
+                        <tr>
+                            <td style="padding:10px;">Clear articulation of learning outcomes</td>
+                            <td style="padding:10px;">Mentoring and support systems clarified expectations.</td>
+                            <td style="padding:10px;">Students understood their learning journey.</td>
+                            <td style="padding:10px;">Greater transparency and clarity.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:10px;">Aligned teaching activities</td>
+                            <td style="padding:10px;">Workshops, advocacy, and technology integration.</td>
+                            <td style="padding:10px;">Broader participation and skill development.</td>
+                            <td style="padding:10px;">Inclusive, skills-based approach.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:10px;">Assessment AS learning</td>
+                            <td style="padding:10px;">Peer and self-assessment in workshops.</td>
+                            <td style="padding:10px;">Students reflected on their own progress.</td>
+                            <td style="padding:10px;">Empowered student voice.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:10px;">Evidence of student engagement and motivation</td>
+                            <td style="padding:10px;">Active participation in advocacy and support programs.</td>
+                            <td style="padding:10px;">Students felt heard and valued.</td>
+                            <td style="padding:10px;">Motivation through ownership.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:10px;">Data-driven curriculum improvement</td>
+                            <td style="padding:10px;">Feedback from mentoring and workshops used to improve content.</td>
+                            <td style="padding:10px;">Iterative improvements based on feedback.</td>
+                            <td style="padding:10px;">Responsive to student needs.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:10px;">Integration with institutional goals</td>
+                            <td style="padding:10px;">Programs aligned with institutional support and advocacy goals.</td>
+                            <td style="padding:10px;">Strengthened institutional culture.</td>
+                            <td style="padding:10px;">Model for other faculties.</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="reflection-bubble">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <h4>2023 Reflection</h4>
+                    <p>"Scaling to larger student cohorts presented new challenges but also opportunities for innovation. 
+                    This year emphasized the importance of systemic approaches to maintain quality while expanding reach."</p>
+                </div>
+            </div>
+            </div>
+
+            <div class="year-entry">
+                <div class="year-marker" style="margin-bottom: 20px;">2024</div>
+                <div class="year-content">
+                    <div class="content-card">
+                        <h3>Research Excellence & Innovation</h3>
+                        <ul class="innovations-list">
+                            <li>Published significant research in educational technology</li>
+                            <li>Created Ecotana, prompts turning chatbots into AI tutors</li>
+                            <li>4 A-List Publications in Academic Journals</li>
+                            <li>89% Average Success Rate, 300% Class Growth</li>
+                        </ul>
+                        <h4>Module Performance:</h4>
+                        <table class="performance-table">
+                            <thead>
+                                <tr><th>Module</th><th>Success Rate</th><th>Qualification</th><th>SET Result</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Accounting Software</td><td>77%</td><td>Higher Certificate in Business Principles and Practice</td><td>4.4</td></tr>
+                                <tr><td>Business Management 3A</td><td>97%</td><td>Bachelor of Commerce</td><td>5</td></tr>
+                                <tr><td>Introduction to Quantitative Thinking and Techniques</td><td>77%</td><td>Higher Certificate in Business Principles and Practice</td><td>4.6</td></tr>
+                                <tr><td>Economics 1B</td><td>80%</td><td>Bachelor of Commerce</td><td>4.4</td></tr>
+                            </tbody>
+                        </table>
+                        <div class="achievement-badges">
+                            <span class="badge award"><i class="fas fa-flask"></i> Top Module Success Rate Nationally</span>
+                            <span class="badge success"><i class="fas fa-globe"></i> Intergration of Gen-AI into teaching and Learning</span>
+                            <span class="badge award"><i class="fas fa-flask"></i> Top Researcher award</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="student-quotes">
+                    <div class="toggle-indicator">Click to view Alignment or Reflection</div>
+                    <div class="speech-bubble positive"><i class="fas fa-quote-left"></i>"The integration of AI tools in learning has transformed our study experience."</div>
+                    <div class="speech-bubble positive"><i class="fas fa-quote-left"></i>"She connects us with global perspectives and industry insights."</div>
+                    <div class="speech-bubble positive"><i class="fas fa-quote-left"></i>"Her research-informed teaching brings cutting-edge knowledge to the classroom."</div>
+                    <div class="speech-bubble constructive"><i class="fas fa-lightbulb"></i>"Managing such large cohorts while maintaining quality is challenging but she does her best."</div>
+                </div>
+                <div class="alignment-container">
+                    <h3 style="margin-top: 2.5rem; margin-bottom: 1rem; padding-top: 1.5rem;">Criterion 1: Constructive Alignment</h3>
+                    <table style="width:100%; border-collapse:collapse; margin-bottom:2.5rem;">
+                        <tr style="background:#4777C3; color:white;">
+                            <th style="padding:10px;">Aspect</th>
+                            <th style="padding:10px;">Evidence</th>
+                            <th style="padding:10px;">Reflection</th>
+                            <th style="padding:10px;">Commentary</th>
+                        </tr>
+                        <tr>
+                            <td style="padding:10px;">Clear articulation of learning outcomes</td>
+                            <td style="padding:10px;">Ecotana defined outcomes for economics knowledge gaps.</td>
+                            <td style="padding:10px;">Measurable via MCQ testing, aligned to NQF 5/7.</td>
+                            <td style="padding:10px;">Precise and student-centered.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:10px;">Aligned teaching activities</td>
+                            <td style="padding:10px;">AI tutoring with prompts for inclusive learning.</td>
+                            <td style="padding:10px;">Incorporated humor and trends for accessibility.</td>
+                            <td style="padding:10px;">Tech facilitation of active construction.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:10px;">Assessment AS learning</td>
+                            <td style="padding:10px;">MCQ feedback and notes generation.</td>
+                            <td style="padding:10px;">Judgment-free environment builds resilience.</td>
+                            <td style="padding:10px;">Continuous, adaptive feedback.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:10px;">Evidence of student engagement and motivation</td>
+                            <td style="padding:10px;">Success rates and sentiment data.</td>
+                            <td style="padding:10px;">Motivation through safe, personalized tutoring.</td>
+                            <td style="padding:10px;">High engagement in challenging modules.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:10px;">Data-driven curriculum improvement</td>
+                            <td style="padding:10px;">Reports from Ecotana informed teaching adjustments.</td>
+                            <td style="padding:10px;">300% research growth shows impact.</td>
+                            <td style="padding:10px;">Strong iterative data use.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:10px;">Integration with institutional goals</td>
+                            <td style="padding:10px;">Gen-AI for inclusivity and empowerment.</td>
+                            <td style="padding:10px;">Aligned with Sirius project and CHANGE.</td>
+                            <td style="padding:10px;">Scalable institutional benefits.</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="reflection-bubble">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <h4>2024 Reflection</h4>
+                    <p>"This year marked a significant milestone in research productivity while managing unprecedented student numbers. 
+                    The challenge of balancing research excellence with teaching quality has driven innovation in scalable educational solutions."</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2025 Placeholder -->
+        <div class="container right">
+            <div class="content">
+                <h2>2025</h2>
+                <p>As of August 10, 2025, ongoing commitment to excellence. Updates forthcoming as the year progresses.</p>
+                <!-- Add future content here if available -->
+            </div>
+        </div>
+        <!-- Final Conclusion Section -->
+        <section class="conclusion-banner" style="background: linear-gradient(135deg, #4777C3 0%, #90EE90 100%); box-shadow: 0 4px 24px rgba(71,119,195,0.15); border-top: 4px solid #4777C3; padding: 50px 20px; text-align: center; color: white; margin-top: 60px;">
+            <h1 style="margin: 20px 0 10px 0; font-size: 2.5rem;">Conclusion: A Journey of Growth & Impact</h1>
+            <h2 style="margin: 10px 0 20px 0; font-size: 1.8rem; opacity: 0.9;">Reflecting on Achievements and the Power of Mindful Education</h2>
+            <p style="max-width: 900px; margin: 0 auto 30px auto; font-size: 1.1rem; line-height: 1.7;">
+                Over the years, this teaching journey has been defined by a commitment to innovation, resilience, and the pursuit of excellence. Each challenge has been an opportunity to learn, adapt, and grow—both as an educator and as a mentor to future leaders. Achievements in academic performance, research, and student engagement are not just milestones, but stepping stones in a story of continuous development.<br><br>
+                Mindful education has been at the heart of this journey: fostering critical thinking, encouraging students to question, reflect, and connect theory to the real world. Technology has been leveraged not just for efficiency, but as a tool to advance equity ambitions—ensuring every student, regardless of background, has access to meaningful learning opportunities.<br><br>
+                Individual and approachable support has empowered students to overcome obstacles, while a culture of grit and resilience has reframed failure as a vital part of growth. The goal has always been to nurture responsible, socially conscious citizens—equipped with the skills, knowledge, and mindset to thrive in a complex world.<br><br>
+                As this portfolio demonstrates, the true measure of success lies not only in results, but in the ability to inspire, support, and transform lives through education.
+            </p>
+        </section>
+    </section>
+</body>
+</html>

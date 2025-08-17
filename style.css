@@ -1,0 +1,863 @@
+/* Hide alignment-container and reflection-bubble by default, show on .active-year */
+.alignment-container,
+.reflection-bubble {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+.year-entry.active-year .alignment-container,
+.year-entry.active-year .reflection-bubble {
+    display: block;
+    opacity: 1;
+}
+/* Alignment Container Styling for Visual Consistency */
+/* Alignment Container Styling for Visual Consistency and No Overlap */
+.alignment-container {
+    background: #f7faff;
+    border: 1.5px solid #4777C3;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(71, 119, 195, 0.08);
+    padding: 2rem 2.5rem 2.5rem 2.5rem;
+    margin: 3rem 0 3rem 0;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
+    position: relative;
+    z-index: 2;
+}
+
+/* Ensure alignment-container tables are visually consistent */
+.alignment-container table {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(71, 119, 195, 0.06);
+}
+.alignment-container th, .alignment-container td {
+    border: 1px solid #e0e7ef;
+}
+.alignment-container th {
+    background: #4777C3;
+    color: white;
+}
+.alignment-container td {
+    background: #fafdff;
+}
+:root {
+    --primary-blue: #4777C3;
+    --accent-green: #90EE90;
+    --light-blue: #EBF8FF;
+    --reflection-bg: #F0F9FF;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-green) 100%);
+    box-shadow: 0 4px 24px rgba(71,119,195,0.15);
+    border-bottom: 4px solid var(--primary-blue);
+    padding: 40px 20px;
+    text-align: center;
+    color: white;
+}
+
+header img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 4px solid var(--accent-green);
+    object-fit: cover;
+}
+
+header h1 {
+    margin: 20px 0 10px 0;
+    font-size: 2.5rem;
+}
+
+header h2 {
+    margin: 10px 0 20px 0;
+    font-size: 1.8rem;
+    opacity: 0.9;
+}
+
+header p {
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* Philosophy Principles */
+.philosophy-principles {
+    list-style: none;
+    padding: 0;
+    margin: 30px auto 0 auto;
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+}
+
+.philosophy-principles li {
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 8px 16px;
+    border-radius: 25px;
+    color: white;
+    white-space: nowrap;
+    backdrop-filter: blur(10px);
+}
+
+.philosophy-principles i {
+    color: var(--accent-green);
+    font-size: 1rem;
+}
+
+/* Performance Charts Section */
+.performance-section {
+    background: white;
+    padding: 60px 20px;
+}
+
+.performance-section h2 {
+    text-align: center;
+    color: var(--primary-blue);
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+}
+
+.charts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.chart-wrapper {
+    background: #f8fafc;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.chart-wrapper h3 {
+    text-align: center;
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+/* Timeline Section */
+.timeline-section {
+    background: #f8fafc;
+    padding: 60px 20px;
+    position: relative;
+}
+
+.timeline-section h2 {
+    text-align: center;
+    color: var(--primary-blue);
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+}
+
+.timeline-container {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Timeline vertical line */
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, var(--primary-blue), var(--accent-green));
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+/* Year entries */
+.year-entry {
+    position: relative;
+    margin-bottom: 400px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+/* Year marker (circle on timeline) */
+.year-marker {
+    position: absolute;
+    left: 50%;
+    top: 40px;
+    width: 80px;
+    height: 80px;
+    background: white;
+    border: 4px solid var(--primary-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: var(--primary-blue);
+    transform: translateX(-50%);
+    z-index: 2;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Content positioning - alternating sides */
+.year-content {
+    position: absolute;
+    width: 45%;
+    top: -55px;
+}
+
+.year-entry:nth-child(odd) .year-content {
+    left: 0;
+    padding-right: 60px;
+}
+
+.year-entry:nth-child(even) .year-content {
+    right: 0;
+    padding-left: 60px;
+}
+
+/* Student quotes positioning - opposite side of content */
+.student-quotes {
+    position: absolute;
+    width: 40%;
+    top: 0;
+}
+
+.year-entry:nth-child(odd) .student-quotes {
+    right: 0;
+    padding-left: 60px;
+}
+
+.year-entry:nth-child(even) .student-quotes {
+    left: 0;
+    padding-right: 60px;
+}
+
+/* Content card styling */
+.content-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid var(--primary-blue);
+    margin-top: 20px;
+}
+
+.content-card h3 {
+    color: var(--primary-blue);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.content-card h4 {
+    color: var(--primary-blue);
+    font-size: 1.2rem;
+    margin: 20px 0 10px 0;
+}
+
+/* Table styling */
+.performance-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.9rem;
+}
+
+.performance-table th,
+.performance-table td {
+    border: 1px solid #ddd;
+    padding: 12px 8px;
+    text-align: center;
+}
+
+.performance-table th {
+    background: var(--primary-blue);
+    color: white;
+    font-weight: bold;
+}
+
+.performance-table tbody tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+/* Achievement badges */
+.achievement-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.badge.award {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.badge.success {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+/* Speech bubbles for student quotes */
+.speech-bubble {
+    position: relative;
+    background: var(--light-blue);
+    border-radius: 20px;
+    padding: 16px 20px;
+    margin: 16px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.speech-bubble::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    top: 20px;
+}
+
+/* Speech bubble tails - pointing toward timeline */
+.year-entry:nth-child(odd) .speech-bubble::before {
+    left: -15px;
+    border: 15px solid transparent;
+    border-right-color: var(--light-blue);
+}
+
+.year-entry:nth-child(even) .speech-bubble::before {
+    right: -15px;
+    border: 15px solid transparent;
+    border-left-color: var(--light-blue);
+}
+
+.speech-bubble.positive {
+    background: #ecfdf5;
+    border-left: 4px solid #10b981;
+}
+
+.speech-bubble.constructive {
+    background: #fef3c7;
+    border-left: 4px solid #f59e0b;
+}
+
+.speech-bubble i {
+    margin-right: 8px;
+    color: #10b981;
+}
+
+.speech-bubble.constructive i {
+    color: #f59e0b;
+}
+
+/* Reflection bubbles - centered at bottom of each year */
+.reflection-bubble {
+    position: absolute;
+    left: 50%;
+    bottom: -400px;
+    transform: translateX(-50%);
+    width: 600px;
+    max-width: 90%;
+    background: linear-gradient(135deg, var(--reflection-bg) 0%, #e0f2fe 100%);
+    border: 2px solid var(--primary-blue);
+    border-radius: 20px;
+    padding: 25px 30px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    z-index: 2;
+    z-index: 2;
+    z-index: 2;
+    z-index: 2;
+    z-index: 2;
+    z-index: 2;
+    text-align: center;
+}
+
+.reflection-bubble::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border: 15px solid transparent;
+    border-bottom-color: var(--primary-blue);
+}
+
+.reflection-bubble h4 {
+    color: var(--primary-blue);
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.reflection-bubble p {
+    font-style: italic;
+    color: #374151;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.reflection-bubble .quote-icon {
+    color: var(--primary-blue);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Lists styling */
+.innovations-list,
+.achievements-list {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.innovations-list li,
+.achievements-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #e5e7eb;
+    position: relative;
+    padding-left: 25px;
+}
+
+.innovations-list li:before {
+    content: "\f0eb";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: var(--accent-green);
+}
+
+.achievements-list li:before {
+    content: "\f091";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: #fbbf24;
+}
+
+/* Responsive design */
+@media screen and (max-width: 1024px) {
+    .timeline-container {
+        padding: 0 10px;
+    }
+    
+    .year-content,
+    .student-quotes {
+        width: 48%;
+    }
+    
+    .year-entry:nth-child(odd) .year-content,
+    .year-entry:nth-child(even) .year-content {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+    
+    .year-entry:nth-child(odd) .student-quotes,
+    .year-entry:nth-child(even) .student-quotes {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .timeline-line {
+        left: 30px;
+    }
+    
+    .year-marker {
+        left: 30px;
+        width: 60px;
+        height: 60px;
+        font-size: 1rem;
+    }
+    
+    .year-entry {
+        margin-bottom: 200px;
+    }
+    
+    .year-content,
+    .student-quotes {
+        position: static;
+        width: 100%;
+        padding: 0 0 0 80px !important;
+        margin-bottom: 30px;
+    }
+    
+    .reflection-bubble {
+        position: static;
+        transform: none;
+        margin: 40px auto 0 auto;
+        width: calc(100% - 80px);
+        margin-left: 80px;
+    }
+    
+    .reflection-bubble::before {
+        display: none;
+    }
+    
+    .speech-bubble::before {
+        display: none;
+    }
+    
+    .charts-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .chart-wrapper {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        padding: 20px 10px;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    header h2 {
+        font-size: 1.4rem;
+    }
+    
+    .timeline-section h2 {
+        font-size: 2rem;
+    }
+    
+    .content-card {
+        padding: 20px;
+    }
+    
+    .performance-table {
+        font-size: 0.8rem;
+    }
+    
+    .performance-table th,
+    .performance-table td {
+        padding: 8px 4px;
+    }
+}.alignment-container {
+    margin: 50px 0 50px 0 !important;
+}
+.content-card {
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+}
+.student-quotes {
+    margin-bottom: 50px !important;
+    gap: 50px !important;
+}
+.reflection-bubble {
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+}
+.achievement-badges {
+    gap: 50px !important;
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+}
+.timeline-section {
+    padding-bottom: 50px !important;
+}
+.timeline-container {
+    padding-bottom: 50px !important;
+}
+.performance-section {
+    padding-bottom: 50px !important;
+}
+/* --- Timeline Structure & Layering Cleanup --- */
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, var(--primary-blue), var(--accent-green));
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.year-marker,
+.year-content,
+.student-quotes,
+.content-card,
+.alignment-container,
+.reflection-bubble,
+.achievement-badges,
+.timeline-section,
+.timeline-container,
+.performance-section {
+    position: relative;
+    z-index: 2;
+}
+
+.alignment-container,
+.reflection-bubble {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.4s;
+    padding: 1rem 1.2rem 1.2rem 1.2rem;
+    margin: 30px 0;
+    background: #f7faff;
+    border: 1.5px solid #4777C3;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(71, 119, 195, 0.08);
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
+}
+.year-entry.active-year .alignment-container,
+.year-entry.active-year .reflection-bubble {
+    display: block;
+    opacity: 1;
+}
+
+.content-card {
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid var(--primary-blue);
+    margin: 30px 0;
+}
+.student-quotes {
+    gap: 25px;
+    margin-bottom: 30px;
+}
+.achievement-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 30px 0;
+}
+.reflection-bubble {
+    background: linear-gradient(135deg, var(--reflection-bg) 0%, #e0f2fe 100%);
+    border: 2px solid var(--primary-blue);
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    width: 600px;
+    max-width: 90%;
+    margin: 20px auto 0 auto;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    transform: none;
+    padding: 12px 15px;
+    z-index: 2;
+}
+
+.timeline-section,
+.timeline-container,
+.performance-section {
+    padding-bottom: 30px;
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+/* --- End Timeline Structure & Layering Cleanup --- */
+/* --- Timeline Inline & Zigzag Layout --- */
+.year-entry {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 80px;
+  position: relative;
+  width: 100%;
+}
+.year-entry.even {
+  flex-direction: row-reverse;
+}
+.year-marker {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.year-content, .student-quotes {
+  flex: 1 1 45%;
+  max-width: 45%;
+  min-width: 320px;
+  margin: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Close button for alignment-container and reflection-bubble */
+.alignment-container .close-btn,
+.reflection-bubble .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: #4777C3;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+  transition: background 0.2s;
+}
+.alignment-container .close-btn:hover,
+.reflection-bubble .close-btn:hover {
+  background: #274472;
+  opacity: 1;
+}
+/* --- End Timeline Inline & Zigzag Layout --- */
+/* --- Year marker 20px above content --- */
+.year-entry {
+  flex-direction: column !important;
+  align-items: center !important;
+}
+.year-marker {
+  position: static !important;
+  margin-bottom: 20px !important;
+  left: unset !important;
+  top: unset !important;
+  transform: none !important;
+}
+.year-entry .year-content,
+.year-entry .student-quotes {
+  margin-top: 0 !important;
+}
+.year-entry.even {
+  flex-direction: column !important;
+}
+/* --- End year marker positioning --- */
+/* --- Restore zigzag inline layout for year content and comments --- */
+.year-entry {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 80px;
+  position: relative;
+  width: 100%;
+}
+.year-entry.even {
+  flex-direction: row-reverse !important;
+}
+.year-marker {
+    position: absolute !important;
+    left: 50% !important;
+    top: -60px !important;
+    margin-bottom: 20px !important;
+    transform: translateX(-50%) !important;
+}
+.year-entry .year-content,
+.year-entry .student-quotes {
+    flex: 1 1 45%;
+    max-width: 45%;
+    min-width: 320px;
+    margin: 20px 40px 0 40px;
+    position: relative;
+    z-index: 2;
+}
+/* --- End zigzag inline layout --- */
+
+/* --- Flip card effect for toggling alignment-container and reflection-bubble --- */
+.year-entry.active-year .year-content,
+.year-entry.active-year .student-quotes {
+    display: none !important;
+}
+.year-entry.active-year .alignment-container {
+    display: flex !important;
+    opacity: 1 !important;
+    align-items: flex-start;
+    justify-content: center;
+    flex: 1 1 45%;
+    max-width: 45%;
+    min-width: 320px;
+    margin: 20px 40px 0 40px;
+    position: relative;
+    z-index: 2;
+}
+.year-entry.active-year .reflection-bubble {
+    display: flex !important;
+    opacity: 1 !important;
+    align-items: flex-start;
+    justify-content: center;
+    flex: 1 1 45%;
+    max-width: 45%;
+    min-width: 320px;
+    margin: 20px 40px 0 40px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Indication for toggling alignment and reflection */
+.toggle-indicator {
+    display: inline-block;
+    font-size: 1rem;
+    color: #fff;
+    background: linear-gradient(90deg, #4777C3 60%, #90EE90 100%);
+    border: none;
+    border-radius: 25px;
+    padding: 10px 28px;
+    margin: 20px auto 10px auto;
+    text-align: center;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(71, 119, 195, 0.12);
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    letter-spacing: 0.02em;
+    outline: none;
+}
+.toggle-indicator:hover, .toggle-indicator:focus {
+    background: linear-gradient(90deg, #274472 60%, #6fdc6f 100%);
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(71, 119, 195, 0.18);
+}
