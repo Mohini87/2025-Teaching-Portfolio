@@ -1,0 +1,9 @@
+{
+  "name": "teaching-portfolio",
+  "version": "1.0.0",
+  "description": "Teaching Portfolio static site for GitHub Pages",
+  "main": "index.html",
+  "scripts": {},
+  "author": "",
+  "license": "MIT"
+}
