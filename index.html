@@ -60,14 +60,55 @@
                 <div class="year-marker">2020</div>
                 <!-- ...existing code... -->
                 <div class="year-content">
+                    <div class="evidence-thumbnails2020" style="margin-bottom: 30px; display: flex; gap: 20px; flex-wrap: wrap;">
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <img src="AIS.png" alt="AIS" class="thumb-img" onclick="expandImage(this)" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer; border-radius: 10px; border: 2px solid #4777C3;">
+                            <span class="evidence-caption">AIS</span>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <img src="AIS 1.png" alt="AIS 1" class="thumb-img" onclick="expandImage(this)" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer; border-radius: 10px; border: 2px solid #4777C3;">
+                            <span class="evidence-caption">AIS 1</span>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <img src="AIS 3.png" alt="AIS 3" class="thumb-img" onclick="expandImage(this)" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer; border-radius: 10px; border: 2px solid #4777C3;">
+                            <span class="evidence-caption">AIS 3</span>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <img src="ACD.png" alt="ACD" class="thumb-img" onclick="expandImage(this)" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer; border-radius: 10px; border: 2px solid #4777C3;">
+                            <span class="evidence-caption">ACD</span>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <img src="Executive Summary.png" alt="Executive Summary" class="thumb-img" onclick="expandImage(this)" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer; border-radius: 10px; border: 2px solid #4777C3;">
+                            <span class="evidence-caption">Executive Summary</span>
+                        </div>
+                    </div>
+                                        <div id="imgModal" style="display:none; position:fixed; z-index:2147483647 !important; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); align-items:center; justify-content:center;">
+    <span onclick="closeModal()" style="position:absolute; top:30px; right:50px; color:white; font-size:2.5rem; cursor:pointer; z-index:10001;">&times;</span>
+    <img id="modalImg" src="" alt="Full Size" style="max-width:90vw; max-height:90vh; border-radius:16px; box-shadow:0 8px 32px rgba(0,0,0,0.4);">
+</div>
+<script>
+function expandImage(img) {
+    var modal = document.getElementById('imgModal');
+    var modalImg = document.getElementById('modalImg');
+    modal.style.display = 'flex';
+    modalImg.src = img.src;
+}
+function closeModal() {
+    document.getElementById('imgModal').style.display = 'none';
+}
+// Optional: close modal on background click
+document.getElementById('imgModal').onclick = function(e) {
+    if (e.target === this) closeModal();
+}
+</script>
                 <!-- ...existing code... -->
                     <div class="content-card">
                         <h3>Innovations & Achievements</h3>
                         <ul class="innovations-list">
-                            <li>Created Academic Intelligence System using Power BI</li>
-                            <li>Developed automated academic counseling documentation</li>
-                            <li>Created automated paperless registration system during COVID</li>
-                            <li>Applied humor and trending events to theory application</li>
+                                <li>Created Academic Intelligence System using Power BI</li>
+                                <li>Developed automated the ACD (academic counseling documentation)</li>
+                                <li>Developed the Academic Intelligence System, a comprehensive student support frameworks</li>
+                                <li>Applied humor and trending events to theory application</li>
                         </ul>
                         <h4>Module Performance:</h4>
                         <table class="performance-table">
@@ -148,14 +189,53 @@
             </div>
 
             <div class="year-entry">
-                <div class="year-marker" style="margin-bottom: 20px;">2021</div>
+                                                <div style="display: flex; flex-direction: row; align-items: flex-start; margin-bottom: 30px; gap: 30px;">
+                                                <div class="year-marker" style="margin-bottom: 20px;">2021</div>
+                                                </div>
                 <div class="year-content">
+                    <div class="evidence-thumbnails2021" style="margin-bottom: 30px; display: flex; gap: 20px; flex-wrap: wrap;">
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <img src="Mohitso.png" alt="Mohitso" class="thumb-img" onclick="expandImage(this)" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer; border-radius: 10px; border: 2px solid #4777C3;">
+                            <span class="evidence-caption">Mohitso</span>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <img src="Mohitso 1.png" alt="Mohitso 1" class="thumb-img" onclick="expandImage(this)" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer; border-radius: 10px; border: 2px solid #4777C3;">
+                            <span class="evidence-caption">Mohitso 1</span>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <img src="Plagiarism.png" alt="Plagiarism" class="thumb-img" onclick="expandImage(this)" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer; border-radius: 10px; border: 2px solid #4777C3;">
+                            <span class="evidence-caption">Plagiarism</span>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <img src="Registration.png" alt="Registration" class="thumb-img" onclick="expandImage(this)" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer; border-radius: 10px; border: 2px solid #4777C3;">
+                            <span class="evidence-caption">Registration</span>
+                        </div>
+                    </div>
+                                                
+<div id="imgModal" style="display:none; position:fixed; z-index:999999999 !important; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); align-items:center; justify-content:center;">
+    <span onclick="closeModal()" style="position:absolute; top:30px; right:50px; color:white; font-size:2.5rem; cursor:pointer; z-index:10001;">&times;</span>
+    <img id="modalImg" src="" alt="Full Size" style="max-width:90vw; max-height:90vh; border-radius:16px; box-shadow:0 8px 32px rgba(0,0,0,0.4);">
+</div>
+<script>
+function expandImage(img) {
+    var modal = document.getElementById('imgModal');
+    var modalImg = document.getElementById('modalImg');
+    modal.style.display = 'flex';
+    modalImg.src = img.src;
+}
+function closeModal() {
+    document.getElementById('imgModal').style.display = 'none';
+}
+// Optional: close modal on background click
+document.getElementById('imgModal').onclick = function(e) {
+    if (e.target === this) closeModal();
+}</script>
                     <div class="content-card">
                         <h3>Continued Excellence & Growth</h3>
                         <ul class="innovations-list">
                             <li>Enhanced Academic Intelligence System with predictive analytics</li>
-                            <li>Implemented early intervention strategies based on data insights</li>
-                            <li>Developed comprehensive student support frameworks</li>
+                            <li>Created the student plagiarism management system for the campus</li>
+                            <li>Created automated paperless registration system during COVID</li>
                             <li>Integrated gamification elements inspired by the Mario Effect</li>
                         </ul>
                         <h4>Module Performance:</h4>
@@ -239,6 +319,36 @@
             <div class="year-entry">
                 <div class="year-marker" style="margin-bottom: 20px;">2022</div>
                 <div class="year-content">
+                    <div class="evidence-thumbnails2022" style="margin-bottom: 30px; display: flex; gap: 20px; flex-wrap: wrap;">
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <img src="Conference 1.png" alt="Conference 1" class="thumb-img" onclick="expandImage(this)" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer; border-radius: 10px; border: 2px solid #4777C3;">
+                            <span class="evidence-caption">Conference 1</span>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <img src="Conference 2.png" alt="Conference 2" class="thumb-img" onclick="expandImage(this)" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer; border-radius: 10px; border: 2px solid #4777C3;">
+                            <span class="evidence-caption">Conference 2</span>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <img src="Conference 3.png" alt="Conference 3" class="thumb-img" onclick="expandImage(this)" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer; border-radius: 10px; border: 2px solid #4777C3;">
+                            <span class="evidence-caption">Conference 3</span>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <img src="Conference 4.png" alt="Conference 4" class="thumb-img" onclick="expandImage(this)" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer; border-radius: 10px; border: 2px solid #4777C3;">
+                            <span class="evidence-caption">Conference 4</span>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <img src="Research 1.png" alt="Research Form" class="thumb-img" onclick="expandImage(this)" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer; border-radius: 10px; border: 2px solid #4777C3;">
+                            <span class="evidence-caption">Research Form</span>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <img src="Research.png" alt="Research Database" class="thumb-img" onclick="expandImage(this)" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer; border-radius: 10px; border: 2px solid #4777C3;">
+                            <span class="evidence-caption">Research Database</span>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <img src="Research Path.png" alt="Research Path" class="thumb-img" onclick="expandImage(this)" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer; border-radius: 10px; border: 2px solid #4777C3;">
+                            <span class="evidence-caption">Research Path</span>
+                        </div>
+                    </div>
                     <div class="content-card">
                         <h3>Research Integration & Expansion</h3>
                         <ul class="innovations-list">
@@ -327,6 +437,36 @@
             <div class="year-entry even">
                 <div class="year-marker" style="margin-bottom: 20px;">2023</div>
                 <div class="year-content">
+                    <div class="evidence-thumbnails2023" style="margin-bottom: 30px; display: flex; gap: 20px; flex-wrap: wrap;">
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <img src="Retention Project.png" alt="Retention Project" class="thumb-img" onclick="expandImage(this)" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer; border-radius: 10px; border: 2px solid #4777C3;">
+                            <span class="evidence-caption">Retention Project</span>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <img src="Conference 5.png" alt="Conference 5" class="thumb-img" onclick="expandImage(this)" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer; border-radius: 10px; border: 2px solid #4777C3;">
+                            <span class="evidence-caption">Conference 5</span>
+                        </div>
+                            <div style="display: flex; flex-direction: column; align-items: center;">
+                                <img src="Conference 6.png" alt="Conference 6" class="thumb-img" onclick="expandImage(this)" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer; border-radius: 10px; border: 2px solid #4777C3;">
+                                <span class="evidence-caption">Conference 6</span>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: center;">
+                                <img src="Best Presenter.png" alt="Best Presenter" class="thumb-img" onclick="expandImage(this)" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer; border-radius: 10px; border: 2px solid #4777C3;">
+                                <span class="evidence-caption">Best Presenter</span>
+                            </div>
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <img src="Trading Challenge.png" alt="Trading Challenge 2023" class="thumb-img" onclick="expandImage(this)" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer; border-radius: 10px; border: 2px solid #4777C3;">
+                            <span class="evidence-caption">Trading Challenge 2023</span>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <img src="Trading Challenge 1.png" alt="Trading Challenge 2024" class="thumb-img" onclick="expandImage(this)" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer; border-radius: 10px; border: 2px solid #4777C3;">
+                            <span class="evidence-caption">Trading Challenge 2024</span>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <img src="Trading Challenge 2.png" alt="Trading Challenge 2025" class="thumb-img" onclick="expandImage(this)" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer; border-radius: 10px; border: 2px solid #4777C3;">
+                            <span class="evidence-caption">Trading Challenge 2025</span>
+                        </div>
+                    </div>
                     <div class="content-card">
                         <h3>Scaling Impact & Leadership</h3>
                         <ul class="innovations-list">
@@ -420,6 +560,45 @@
             <div class="year-entry">
                 <div class="year-marker" style="margin-bottom: 20px;">2024</div>
                 <div class="year-content">
+                    <div class="evidence-thumbnails2024" style="margin-bottom: 30px; display: flex; gap: 20px; flex-wrap: wrap;">
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <img src="Ecotana.png" alt="Ecotana" class="thumb-img" onclick="expandImage(this)" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer; border-radius: 10px; border: 2px solid #4777C3;">
+                            <span class="evidence-caption">Ecotana</span>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <img src="Ecotana 4.png" alt="Ecotana 4" class="thumb-img" onclick="expandImage(this)" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer; border-radius: 10px; border: 2px solid #4777C3;">
+                            <span class="evidence-caption">Ecotana 4</span>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <img src="Ecotana 5.png" alt="Ecotana 5" class="thumb-img" onclick="expandImage(this)" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer; border-radius: 10px; border: 2px solid #4777C3;">
+                            <span class="evidence-caption">Ecotana 5</span>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <img src="Ecotana 6.png" alt="Ecotana 6" class="thumb-img" onclick="expandImage(this)" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer; border-radius: 10px; border: 2px solid #4777C3;">
+                            <span class="evidence-caption">Ecotana 6</span>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <img src="Ecotana 7.png" alt="Ecotana 7" class="thumb-img" onclick="expandImage(this)" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer; border-radius: 10px; border: 2px solid #4777C3;">
+                            <span class="evidence-caption">Ecotana 7</span>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <img src="Journal 1.png" alt="Journal 1" class="thumb-img" onclick="expandImage(this)" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer; border-radius: 10px; border: 2px solid #4777C3;">
+                            <span class="evidence-caption"><a href="https://ojs.journalsdg.org/jlss/issue/view/49" target="_blank" rel="noopener" style="color:#4777C3; text-decoration:underline;">Journal 1</a></span>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <img src="Journal 2.png" alt="Journal 2" class="thumb-img" onclick="expandImage(this)" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer; border-radius: 10px; border: 2px solid #4777C3;">
+                            <span class="evidence-caption"><a href="https://rgsa.openaccesspublications.org/rgsa/issue/view/85" target="_blank" rel="noopener" style="color:#4777C3; text-decoration:underline;">Journal 2</a></span>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <img src="Journal 3.png" alt="Journal 3" class="thumb-img" onclick="expandImage(this)" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer; border-radius: 10px; border: 2px solid #4777C3;">
+                            <span class="evidence-caption"><a href="https://rgsa.openaccesspublications.org/rgsa/issue/view/88" target="_blank" rel="noopener" style="color:#4777C3; text-decoration:underline;">Journal 3</a></span>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <img src="Journal 4.png" alt="Journal 4" class="thumb-img" onclick="expandImage(this)" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer; border-radius: 10px; border: 2px solid #4777C3;">
+                            <span class="evidence-caption"><a href="https://ojs.journalsdg.org/jlss/issue/view/55" target="_blank" rel="noopener" style="color:#4777C3; text-decoration:underline;">Journal 4</a></span>
+                        </div>
+                    </div>
+
                     <div class="content-card">
                         <h3>Research Excellence & Innovation</h3>
                         <ul class="innovations-list">
@@ -531,4 +710,25 @@
         </section>
     </section>
 </body>
+<div id="imgModal" style="display:none; position:fixed; z-index:2147483647 !important; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); align-items:center; justify-content:center;">
+    <div id="imgModalFloating" style="background: #fff; border-radius: 18px; box-shadow: 0 8px 32px rgba(71,119,195,0.25), 0 2px 8px rgba(0,0,0,0.12); padding: 32px 32px 24px 32px; position: relative; display: flex; flex-direction: column; align-items: center; max-width: 95vw; max-height: 95vh;">
+        <span onclick="closeModal()" style="position:absolute; top:18px; right:24px; color:#4777C3; font-size:2.5rem; cursor:pointer; z-index:10001; background: #fff; border-radius: 50%; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.10);">&times;</span>
+        <img id="modalImg" src="" alt="Full Size" style="max-width:70vw; max-height:70vh; border-radius:16px; box-shadow:0 8px 32px rgba(0,0,0,0.12); border: 3px solid #4777C3; background: #f8fafc;">
+    </div>
+</div>
+<script>
+function expandImage(img) {
+    var modal = document.getElementById('imgModal');
+    var modalImg = document.getElementById('modalImg');
+    modal.style.display = 'flex';
+    modalImg.src = img.src;
+}
+function closeModal() {
+    document.getElementById('imgModal').style.display = 'none';
+}
+// Optional: close modal on background click
+document.getElementById('imgModal').onclick = function(e) {
+    if (e.target === this) closeModal();
+}
+</script>
 </html>
