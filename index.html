@@ -61,6 +61,11 @@
                 <!-- ...existing code... -->
                 <div class="year-content">
                     <div class="evidence-thumbnails2020" style="margin-bottom: 30px; display: flex; gap: 20px; flex-wrap: wrap;">
+                        <!-- Expanded thumbnail container (hidden by default) -->
+                        <div id="expandedThumbnail2020" class="expanded-thumbnail" style="display:none; position:absolute; left:0; right:0; margin:auto; top:0; z-index:1000; background:#fff; border-radius:16px; box-shadow:0 8px 32px rgba(0,0,0,0.25); padding:24px; max-width:600px; max-height:90vh; align-items:center; justify-content:center; flex-direction:column;">
+                            <span onclick="closeExpandedThumbnail('2020')" style="position:absolute; top:10px; right:20px; color:#4777C3; font-size:2rem; cursor:pointer;">&times;</span>
+                            <img id="expandedImg2020" src="" alt="Expanded" style="max-width:100%; max-height:70vh; border-radius:12px; margin-bottom:12px;">
+                        </div>
                         <div style="display: flex; flex-direction: column; align-items: center;">
                             <img src="AIS.png" alt="AIS" class="thumb-img" onclick="expandImage(this)" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer; border-radius: 10px; border: 2px solid #4777C3;">
                             <span class="evidence-caption">AIS</span>
@@ -82,25 +87,6 @@
                             <span class="evidence-caption">Executive Summary</span>
                         </div>
                     </div>
-                                        <div id="imgModal" style="display:none; position:fixed; z-index:2147483647 !important; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); align-items:center; justify-content:center;">
-    <span onclick="closeModal()" style="position:absolute; top:30px; right:50px; color:white; font-size:2.5rem; cursor:pointer; z-index:10001;">&times;</span>
-    <img id="modalImg" src="" alt="Full Size" style="max-width:90vw; max-height:90vh; border-radius:16px; box-shadow:0 8px 32px rgba(0,0,0,0.4);">
-</div>
-<script>
-function expandImage(img) {
-    var modal = document.getElementById('imgModal');
-    var modalImg = document.getElementById('modalImg');
-    modal.style.display = 'flex';
-    modalImg.src = img.src;
-}
-function closeModal() {
-    document.getElementById('imgModal').style.display = 'none';
-}
-// Optional: close modal on background click
-document.getElementById('imgModal').onclick = function(e) {
-    if (e.target === this) closeModal();
-}
-</script>
                 <!-- ...existing code... -->
                     <div class="content-card">
                         <h3>Innovations & Achievements</h3>
@@ -143,37 +129,37 @@ document.getElementById('imgModal').onclick = function(e) {
                             <th style="padding:10px;">Commentary</th>
                         </tr>
                         <tr>
-                            <td style="padding:10px;">Clear articulation of learning outcomes</td>
+                            <td style="padding:10px;"><strong>Clear articulation of learning outcomes</strong></td>
                             <td style="padding:10px;">Online modules and video lectures defined outcomes for remote learning.</td>
                             <td style="padding:10px;">Measured via quizzes and assignments, aligned to new online standards.</td>
                             <td style="padding:10px;">Student-centered, flexible for remote context.</td>
                         </tr>
                         <tr>
-                            <td style="padding:10px;">Aligned teaching activities</td>
+                            <td style="padding:10px;"><strong>Aligned teaching activities</strong></td>
                             <td style="padding:10px;">Interactive quizzes, video lectures, and online discussions.</td>
                             <td style="padding:10px;">Increased engagement and participation online.</td>
                             <td style="padding:10px;">Active learning despite remote challenges.</td>
                         </tr>
                         <tr>
-                            <td style="padding:10px;">Assessment AS learning</td>
+                            <td style="padding:10px;"><strong>Assessment AS learning</strong></td>
                             <td style="padding:10px;">Frequent online quizzes and feedback.</td>
                             <td style="padding:10px;">Helped students self-assess and improve.</td>
                             <td style="padding:10px;">Continuous, adaptive feedback loop.</td>
                         </tr>
                         <tr>
-                            <td style="padding:10px;">Evidence of student engagement and motivation</td>
+                            <td style="padding:10px;"><strong>Evidence of student engagement and motivation</strong></td>
                             <td style="padding:10px;">High quiz participation and positive feedback.</td>
                             <td style="padding:10px;">Students adapted well to online learning.</td>
                             <td style="padding:10px;">Engagement maintained through innovation.</td>
                         </tr>
                         <tr>
-                            <td style="padding:10px;">Data-driven curriculum improvement</td>
+                            <td style="padding:10px;"><strong>Data-driven curriculum improvement</strong></td>
                             <td style="padding:10px;">Quiz and assignment data informed teaching adjustments.</td>
                             <td style="padding:10px;">Improved outcomes over the year.</td>
                             <td style="padding:10px;">Iterative, responsive teaching.</td>
                         </tr>
                         <tr>
-                            <td style="padding:10px;">Integration with institutional goals</td>
+                            <td style="padding:10px;"><strong>Integration with institutional goals</strong></td>
                             <td style="padding:10px;">Online transition aligned with university COVID response.</td>
                             <td style="padding:10px;">Supported institutional resilience.</td>
                             <td style="padding:10px;">Model for future digital transformation.</td>
@@ -183,8 +169,7 @@ document.getElementById('imgModal').onclick = function(e) {
                 <div class="reflection-bubble">
                     <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
                     <h4>2020 Reflection</h4>
-                    <p>"The challenges of remote learning during COVID-19 highlighted the importance of technology and early intervention. 
-                    These lessons shaped a more resilient, inclusive, and data-driven approach for the following year."</p>
+                        <p>"The challenges of remote learning during COVID-19 highlighted the importance of technology, early intervention, and data-driven support. In response, I developed the Academic Intelligence System (AIS) to proactively identify and support at-risk students, ensuring no one was left behind. This experience taught me the value of actionable intelligence and laid the foundation for future systems that would further personalize and enhance student support. The lessons of 2020—resilience, inclusivity, and the power of timely data—became the basis for continuous improvement in the years to follow."</p>
                 </div>
             </div>
 
@@ -194,6 +179,11 @@ document.getElementById('imgModal').onclick = function(e) {
                                                 </div>
                 <div class="year-content">
                     <div class="evidence-thumbnails2021" style="margin-bottom: 30px; display: flex; gap: 20px; flex-wrap: wrap;">
+                        <!-- Expanded thumbnail container (hidden by default) -->
+                        <div id="expandedThumbnail2021" class="expanded-thumbnail" style="display:none; position:absolute; left:0; right:0; margin:auto; top:0; z-index:1000; background:#fff; border-radius:16px; box-shadow:0 8px 32px rgba(0,0,0,0.25); padding:24px; max-width:600px; max-height:90vh; align-items:center; justify-content:center; flex-direction:column;">
+                            <span onclick="closeExpandedThumbnail('2021')" style="position:absolute; top:10px; right:20px; color:#4777C3; font-size:2rem; cursor:pointer;">&times;</span>
+                            <img id="expandedImg2021" src="" alt="Expanded" style="max-width:100%; max-height:70vh; border-radius:12px; margin-bottom:12px;">
+                        </div>
                         <div style="display: flex; flex-direction: column; align-items: center;">
                             <img src="Mohitso.png" alt="Mohitso" class="thumb-img" onclick="expandImage(this)" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer; border-radius: 10px; border: 2px solid #4777C3;">
                             <span class="evidence-caption">Mohitso</span>
@@ -211,25 +201,6 @@ document.getElementById('imgModal').onclick = function(e) {
                             <span class="evidence-caption">Registration</span>
                         </div>
                     </div>
-                                                
-<div id="imgModal" style="display:none; position:fixed; z-index:999999999 !important; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); align-items:center; justify-content:center;">
-    <span onclick="closeModal()" style="position:absolute; top:30px; right:50px; color:white; font-size:2.5rem; cursor:pointer; z-index:10001;">&times;</span>
-    <img id="modalImg" src="" alt="Full Size" style="max-width:90vw; max-height:90vh; border-radius:16px; box-shadow:0 8px 32px rgba(0,0,0,0.4);">
-</div>
-<script>
-function expandImage(img) {
-    var modal = document.getElementById('imgModal');
-    var modalImg = document.getElementById('modalImg');
-    modal.style.display = 'flex';
-    modalImg.src = img.src;
-}
-function closeModal() {
-    document.getElementById('imgModal').style.display = 'none';
-}
-// Optional: close modal on background click
-document.getElementById('imgModal').onclick = function(e) {
-    if (e.target === this) closeModal();
-}</script>
                     <div class="content-card">
                         <h3>Continued Excellence & Growth</h3>
                         <ul class="innovations-list">
@@ -271,37 +242,37 @@ document.getElementById('imgModal').onclick = function(e) {
                             <th style="padding:10px;">Commentary</th>
                         </tr>
                         <tr>
-                            <td style="padding:10px;">Clear articulation of learning outcomes</td>
+                            <td style="padding:10px;"><strong>Clear articulation of learning outcomes</strong></td>
                             <td style="padding:10px;">Plagiarism system outcomes focused on integrity and rehabilitation.</td>
                             <td style="padding:10px;">Linked to ethical business practices in NQF.</td>
                             <td style="padding:10px;">Measurable ethical goals.</td>
                         </tr>
                         <tr>
-                            <td style="padding:10px;">Aligned teaching activities</td>
+                            <td style="padding:10px;"><strong>Aligned teaching activities</strong></td>
                             <td style="padding:10px;">Automated rehabilitation efforts with humor for accessibility.</td>
                             <td style="padding:10px;">Built grit through fair policy application.</td>
                             <td style="padding:10px;">Equitable and inclusive.</td>
                         </tr>
                         <tr>
-                            <td style="padding:10px;">Assessment AS learning</td>
+                            <td style="padding:10px;"><strong>Assessment AS learning</strong></td>
                             <td style="padding:10px;">System provided feedback on integrity breaches.</td>
                             <td style="padding:10px;">Encouraged self-reflection and improvement.</td>
                             <td style="padding:10px;">Constructive feedback loops.</td>
                         </tr>
                         <tr>
-                            <td style="padding:10px;">Evidence of student engagement and motivation</td>
+                            <td style="padding:10px;"><strong>Evidence of student engagement and motivation</strong></td>
                             <td style="padding:10px;">High success rates despite challenges.</td>
                             <td style="padding:10px;">Motivation via transparent processes.</td>
                             <td style="padding:10px;">Reduced incidents, increased trust.</td>
                         </tr>
                         <tr>
-                            <td style="padding:10px;">Data-driven curriculum improvement</td>
+                            <td style="padding:10px;"><strong>Data-driven curriculum improvement</strong></td>
                             <td style="padding:10px;">Plagiarism data informed policy refinements.</td>
                             <td style="padding:10px;">Iterative updates for better outcomes.</td>
                             <td style="padding:10px;">Evidence-based adjustments.</td>
                         </tr>
                         <tr>
-                            <td style="padding:10px;">Integration with institutional goals</td>
+                            <td style="padding:10px;"><strong>Integration with institutional goals</strong></td>
                             <td style="padding:10px;">Promoted academic integrity culture.</td>
                             <td style="padding:10px;">Aligned with Advocacy and Empowerment.</td>
                             <td style="padding:10px;">Institutional alignment strong.</td>
@@ -311,8 +282,67 @@ document.getElementById('imgModal').onclick = function(e) {
                 <div class="reflection-bubble">
                     <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
                     <h4>2021 Reflection</h4>
-                    <p>"Building on 2020's foundation, this year focused on refining data-driven approaches and enhancing student engagement. 
-                    The integration of predictive analytics began showing promising results in early intervention strategies."</p>
+                        <p>"Building on the foundation of AIS, I created Mohitso—a bespoke Power BI system inspired by the institution’s Kitso tracker but tailored for our campus. Mohitso provided actionable intelligence, interactive flows, and engaging visuals to manage at-risk students, recognize achievement, and analyse lecturer to student ratios and assessment patterns. I also developed a plagiarism management system to reinforce academic integrity and streamline policy application. These innovations taught me that systems must not only identify challenges but also empower both students and staff to act. The year’s focus on data-driven engagement and ethical culture set the stage for research-driven improvements and more individualized support in 2022."</p>
+                <!-- 2025 YEAR ENTRY START -->
+                <div class="year-entry even">
+                    <div class="year-marker" style="margin-bottom: 20px;">2025</div>
+                    <div class="year-content">
+                        <div class="evidence-thumbnails2025" style="margin-bottom: 30px; display: flex; gap: 20px; flex-wrap: wrap;">
+                            <!-- Expanded thumbnail container (hidden by default) -->
+                            <div id="expandedThumbnail2025" class="expanded-thumbnail" style="display:none; position:absolute; left:0; right:0; margin:auto; top:0; z-index:1000; background:#fff; border-radius:16px; box-shadow:0 8px 32px rgba(0,0,0,0.25); padding:24px; max-width:600px; max-height:90vh; align-items:center; justify-content:center; flex-direction:column;">
+                                <span onclick="closeExpandedThumbnail('2025')" style="position:absolute; top:10px; right:20px; color:#4777C3; font-size:2rem; cursor:pointer;">&times;</span>
+                                <img id="expandedImg2025" src="" alt="Expanded" style="max-width:100%; max-height:70vh; border-radius:12px; margin-bottom:12px;">
+                            </div>
+                            <!-- Add 2025 evidence thumbnails here as needed -->
+                        </div>
+                        <div class="content-card">
+                            <h3>Future Vision & Ongoing Impact</h3>
+                            <ul class="innovations-list">
+                                <li>Placeholder for 2025 innovation or achievement</li>
+                            </ul>
+                            <h4>Module Performance:</h4>
+                            <table class="performance-table">
+                                <thead>
+                                    <tr><th>Module</th><th>Success Rate</th><th>Qualification</th><th>SET Result</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>--</td><td>--</td><td>--</td><td>--</td></tr>
+                                </tbody>
+                            </table>
+                            <div class="achievement-badges">
+                                <span class="badge award"><i class="fas fa-star"></i> 2025 Achievement</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="student-quotes">
+                        <div class="toggle-indicator">Click to view Alignment or Reflection</div>
+                        <div class="speech-bubble positive"><i class="fas fa-quote-left"></i>"2025 student feedback placeholder."</div>
+                        <div class="speech-bubble constructive"><i class="fas fa-lightbulb"></i>"2025 constructive feedback placeholder."</div>
+                    </div>
+                    <div class="alignment-container">
+                        <h3 style="margin-top: 2.5rem; margin-bottom: 1rem; padding-top: 1.5rem;">Criterion 1: Constructive Alignment</h3>
+                        <table style="width:100%; border-collapse:collapse; margin-bottom:2.5rem;">
+                            <tr style="background:#4777C3; color:white;">
+                                <th style="padding:10px;">Aspect</th>
+                                <th style="padding:10px;">Evidence</th>
+                                <th style="padding:10px;">Reflection</th>
+                                <th style="padding:10px;">Commentary</th>
+                            </tr>
+                            <tr>
+                                <td style="padding:10px;"><strong>--</strong></td>
+                                <td style="padding:10px;">--</td>
+                                <td style="padding:10px;">--</td>
+                                <td style="padding:10px;">--</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="reflection-bubble">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <h4>2025 Reflection</h4>
+                        <p>"2025 reflection placeholder."</p>
+                    </div>
+                </div>
+                <!-- 2025 YEAR ENTRY END -->
                 </div>
             </div>
 
@@ -320,6 +350,11 @@ document.getElementById('imgModal').onclick = function(e) {
                 <div class="year-marker" style="margin-bottom: 20px;">2022</div>
                 <div class="year-content">
                     <div class="evidence-thumbnails2022" style="margin-bottom: 30px; display: flex; gap: 20px; flex-wrap: wrap;">
+                        <!-- Expanded thumbnail container (hidden by default) -->
+                        <div id="expandedThumbnail2022" class="expanded-thumbnail" style="display:none; position:absolute; left:0; right:0; margin:auto; top:0; z-index:1000; background:#fff; border-radius:16px; box-shadow:0 8px 32px rgba(0,0,0,0.25); padding:24px; max-width:600px; max-height:90vh; align-items:center; justify-content:center; flex-direction:column;">
+                            <span onclick="closeExpandedThumbnail('2022')" style="position:absolute; top:10px; right:20px; color:#4777C3; font-size:2rem; cursor:pointer;">&times;</span>
+                            <img id="expandedImg2022" src="" alt="Expanded" style="max-width:100%; max-height:70vh; border-radius:12px; margin-bottom:12px;">
+                        </div>
                         <div style="display: flex; flex-direction: column; align-items: center;">
                             <img src="Conference 1.png" alt="Conference 1" class="thumb-img" onclick="expandImage(this)" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer; border-radius: 10px; border: 2px solid #4777C3;">
                             <span class="evidence-caption">Conference 1</span>
@@ -389,37 +424,37 @@ document.getElementById('imgModal').onclick = function(e) {
                             <th style="padding:10px;">Commentary</th>
                         </tr>
                         <tr>
-                            <td style="padding:10px;">Clear articulation of learning outcomes</td>
+                            <td style="padding:10px;"><strong>Clear articulation of learning outcomes</strong></td>
                             <td style="padding:10px;">Research outcomes integrated into module objectives.</td>
                             <td style="padding:10px;">Students understood research's role in learning.</td>
                             <td style="padding:10px;">Bridged research and teaching.</td>
                         </tr>
                         <tr>
-                            <td style="padding:10px;">Aligned teaching activities</td>
+                            <td style="padding:10px;"><strong>Aligned teaching activities</strong></td>
                             <td style="padding:10px;">Research projects and presentations.</td>
                             <td style="padding:10px;">Increased student ownership of learning.</td>
                             <td style="padding:10px;">Active, inquiry-based learning.</td>
                         </tr>
                         <tr>
-                            <td style="padding:10px;">Assessment AS learning</td>
+                            <td style="padding:10px;"><strong>Assessment AS learning</strong></td>
                             <td style="padding:10px;">Research presentations and peer feedback.</td>
                             <td style="padding:10px;">Students learned from each other.</td>
                             <td style="padding:10px;">Collaborative assessment.</td>
                         </tr>
                         <tr>
-                            <td style="padding:10px;">Evidence of student engagement and motivation</td>
+                            <td style="padding:10px;"><strong>Evidence of student engagement and motivation</strong></td>
                             <td style="padding:10px;">High participation in research activities.</td>
                             <td style="padding:10px;">Students motivated by real-world impact.</td>
                             <td style="padding:10px;">Engagement through relevance.</td>
                         </tr>
                         <tr>
-                            <td style="padding:10px;">Data-driven curriculum improvement</td>
+                            <td style="padding:10px;"><strong>Data-driven curriculum improvement</strong></td>
                             <td style="padding:10px;">Research data used to refine modules.</td>
                             <td style="padding:10px;">Continuous improvement based on evidence.</td>
                             <td style="padding:10px;">Research-informed teaching.</td>
                         </tr>
                         <tr>
-                            <td style="padding:10px;">Integration with institutional goals</td>
+                            <td style="padding:10px;"><strong>Integration with institutional goals</strong></td>
                             <td style="padding:10px;">Research aligned with institutional priorities.</td>
                             <td style="padding:10px;">Supported university's research mission.</td>
                             <td style="padding:10px;">Strengthened institutional reputation.</td>
@@ -429,8 +464,7 @@ document.getElementById('imgModal').onclick = function(e) {
                 <div class="reflection-bubble">
                     <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
                     <h4>2022 Reflection</h4>
-                    <p>"The integration of research activities with teaching practice marked a significant milestone. 
-                    This year demonstrated how academic inquiry can directly enhance classroom effectiveness and student outcomes."</p>
+                        <p>"With research becoming an institutional priority, I developed systems to manage and support over 70 students with diverse research topics, populations, and motivations. Leveraging Microsoft automation and a Socratic approach, I provided bespoke, critical-thinking support through forms and automated feedback. The experience of building individual relationships through co-creativity and problem-solving was transformative—at graduation, every student’s success felt personal. I also implemented AI trackers for my emails, allowing me to quickly identify and support struggling students before they became disengaged. The lesson: personalized, timely support and scalable systems are key to fostering both academic excellence and a sense of belonging. These insights informed my approach to scaling impact and supporting national initiatives in 2023."</p>
                 </div>
             </div>
 
@@ -438,6 +472,11 @@ document.getElementById('imgModal').onclick = function(e) {
                 <div class="year-marker" style="margin-bottom: 20px;">2023</div>
                 <div class="year-content">
                     <div class="evidence-thumbnails2023" style="margin-bottom: 30px; display: flex; gap: 20px; flex-wrap: wrap;">
+                        <!-- Expanded thumbnail container (hidden by default) -->
+                        <div id="expandedThumbnail2023" class="expanded-thumbnail" style="display:none; position:absolute; left:0; right:0; margin:auto; top:0; z-index:1000; background:#fff; border-radius:16px; box-shadow:0 8px 32px rgba(0,0,0,0.25); padding:24px; max-width:600px; max-height:90vh; align-items:center; justify-content:center; flex-direction:column;">
+                            <span onclick="closeExpandedThumbnail('2023')" style="position:absolute; top:10px; right:20px; color:#4777C3; font-size:2rem; cursor:pointer;">&times;</span>
+                            <img id="expandedImg2023" src="" alt="Expanded" style="max-width:100%; max-height:70vh; border-radius:12px; margin-bottom:12px;">
+                        </div>
                         <div style="display: flex; flex-direction: column; align-items: center;">
                             <img src="Retention Project.png" alt="Retention Project" class="thumb-img" onclick="expandImage(this)" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer; border-radius: 10px; border: 2px solid #4777C3;">
                             <span class="evidence-caption">Retention Project</span>
@@ -511,37 +550,37 @@ document.getElementById('imgModal').onclick = function(e) {
                             <th style="padding:10px;">Commentary</th>
                         </tr>
                         <tr>
-                            <td style="padding:10px;">Clear articulation of learning outcomes</td>
+                            <td style="padding:10px;"><strong>Clear articulation of learning outcomes</strong></td>
                             <td style="padding:10px;">Mentoring and support systems clarified expectations.</td>
                             <td style="padding:10px;">Students understood their learning journey.</td>
                             <td style="padding:10px;">Greater transparency and clarity.</td>
                         </tr>
                         <tr>
-                            <td style="padding:10px;">Aligned teaching activities</td>
+                            <td style="padding:10px;"><strong>Aligned teaching activities</strong></td>
                             <td style="padding:10px;">Workshops, advocacy, and technology integration.</td>
                             <td style="padding:10px;">Broader participation and skill development.</td>
                             <td style="padding:10px;">Inclusive, skills-based approach.</td>
                         </tr>
                         <tr>
-                            <td style="padding:10px;">Assessment AS learning</td>
+                            <td style="padding:10px;"><strong>Assessment AS learning</strong></td>
                             <td style="padding:10px;">Peer and self-assessment in workshops.</td>
                             <td style="padding:10px;">Students reflected on their own progress.</td>
                             <td style="padding:10px;">Empowered student voice.</td>
                         </tr>
                         <tr>
-                            <td style="padding:10px;">Evidence of student engagement and motivation</td>
+                            <td style="padding:10px;"><strong>Evidence of student engagement and motivation</strong></td>
                             <td style="padding:10px;">Active participation in advocacy and support programs.</td>
                             <td style="padding:10px;">Students felt heard and valued.</td>
                             <td style="padding:10px;">Motivation through ownership.</td>
                         </tr>
                         <tr>
-                            <td style="padding:10px;">Data-driven curriculum improvement</td>
+                            <td style="padding:10px;"><strong>Data-driven curriculum improvement</strong></td>
                             <td style="padding:10px;">Feedback from mentoring and workshops used to improve content.</td>
                             <td style="padding:10px;">Iterative improvements based on feedback.</td>
                             <td style="padding:10px;">Responsive to student needs.</td>
                         </tr>
                         <tr>
-                            <td style="padding:10px;">Integration with institutional goals</td>
+                            <td style="padding:10px;"><strong>Integration with institutional goals</strong></td>
                             <td style="padding:10px;">Programs aligned with institutional support and advocacy goals.</td>
                             <td style="padding:10px;">Strengthened institutional culture.</td>
                             <td style="padding:10px;">Model for other faculties.</td>
@@ -551,8 +590,7 @@ document.getElementById('imgModal').onclick = function(e) {
                 <div class="reflection-bubble">
                     <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
                     <h4>2023 Reflection</h4>
-                    <p>"Scaling to larger student cohorts presented new challenges but also opportunities for innovation. 
-                    This year emphasized the importance of systemic approaches to maintain quality while expanding reach."</p>
+                        <p>"Scaling to larger student cohorts presented new challenges and opportunities for innovation. To support learning beyond the curriculum, I took over the Trading Challenge, growing participation from 347 to 502 students in 2025 across IIE brands and campuses, with dedicated platforms and mentorship. My husband, an experienced investor, joined as a mentor, and I created resources—including a YouTube channel—to support future trading. The lesson: sustainable impact requires both scalable systems and strong networks of support. These experiences inspired me to further leverage technology for personalized learning and skills development in 2024."</p>
                 </div>
             </div>
             </div>
@@ -561,6 +599,11 @@ document.getElementById('imgModal').onclick = function(e) {
                 <div class="year-marker" style="margin-bottom: 20px;">2024</div>
                 <div class="year-content">
                     <div class="evidence-thumbnails2024" style="margin-bottom: 30px; display: flex; gap: 20px; flex-wrap: wrap;">
+                        <!-- Expanded thumbnail container (hidden by default) -->
+                        <div id="expandedThumbnail2024" class="expanded-thumbnail" style="display:none; position:absolute; left:0; right:0; margin:auto; top:0; z-index:1000; background:#fff; border-radius:16px; box-shadow:0 8px 32px rgba(0,0,0,0.25); padding:24px; max-width:600px; max-height:90vh; align-items:center; justify-content:center; flex-direction:column;">
+                            <span onclick="closeExpandedThumbnail('2024')" style="position:absolute; top:10px; right:20px; color:#4777C3; font-size:2rem; cursor:pointer;">&times;</span>
+                            <img id="expandedImg2024" src="" alt="Expanded" style="max-width:100%; max-height:70vh; border-radius:12px; margin-bottom:12px;">
+                        </div>
                         <div style="display: flex; flex-direction: column; align-items: center;">
                             <img src="Ecotana.png" alt="Ecotana" class="thumb-img" onclick="expandImage(this)" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer; border-radius: 10px; border: 2px solid #4777C3;">
                             <span class="evidence-caption">Ecotana</span>
@@ -643,37 +686,37 @@ document.getElementById('imgModal').onclick = function(e) {
                             <th style="padding:10px;">Commentary</th>
                         </tr>
                         <tr>
-                            <td style="padding:10px;">Clear articulation of learning outcomes</td>
+                            <td style="padding:10px;"><strong>Clear articulation of learning outcomes</strong></td>
                             <td style="padding:10px;">Ecotana defined outcomes for economics knowledge gaps.</td>
                             <td style="padding:10px;">Measurable via MCQ testing, aligned to NQF 5/7.</td>
                             <td style="padding:10px;">Precise and student-centered.</td>
                         </tr>
                         <tr>
-                            <td style="padding:10px;">Aligned teaching activities</td>
+                            <td style="padding:10px;"><strong>Aligned teaching activities</strong></td>
                             <td style="padding:10px;">AI tutoring with prompts for inclusive learning.</td>
                             <td style="padding:10px;">Incorporated humor and trends for accessibility.</td>
                             <td style="padding:10px;">Tech facilitation of active construction.</td>
                         </tr>
                         <tr>
-                            <td style="padding:10px;">Assessment AS learning</td>
+                            <td style="padding:10px;"><strong>Assessment AS learning</strong></td>
                             <td style="padding:10px;">MCQ feedback and notes generation.</td>
                             <td style="padding:10px;">Judgment-free environment builds resilience.</td>
                             <td style="padding:10px;">Continuous, adaptive feedback.</td>
                         </tr>
                         <tr>
-                            <td style="padding:10px;">Evidence of student engagement and motivation</td>
+                            <td style="padding:10px;"><strong>Evidence of student engagement and motivation</strong></td>
                             <td style="padding:10px;">Success rates and sentiment data.</td>
                             <td style="padding:10px;">Motivation through safe, personalized tutoring.</td>
                             <td style="padding:10px;">High engagement in challenging modules.</td>
                         </tr>
                         <tr>
-                            <td style="padding:10px;">Data-driven curriculum improvement</td>
+                            <td style="padding:10px;"><strong>Data-driven curriculum improvement</strong></td>
                             <td style="padding:10px;">Reports from Ecotana informed teaching adjustments.</td>
                             <td style="padding:10px;">300% research growth shows impact.</td>
                             <td style="padding:10px;">Strong iterative data use.</td>
                         </tr>
                         <tr>
-                            <td style="padding:10px;">Integration with institutional goals</td>
+                            <td style="padding:10px;"><strong>Integration with institutional goals</strong></td>
                             <td style="padding:10px;">Gen-AI for inclusivity and empowerment.</td>
                             <td style="padding:10px;">Aligned with Sirius project and CHANGE.</td>
                             <td style="padding:10px;">Scalable institutional benefits.</td>
@@ -683,8 +726,7 @@ document.getElementById('imgModal').onclick = function(e) {
                 <div class="reflection-bubble">
                     <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
                     <h4>2024 Reflection</h4>
-                    <p>"This year marked a significant milestone in research productivity while managing unprecedented student numbers. 
-                    The challenge of balancing research excellence with teaching quality has driven innovation in scalable educational solutions."</p>
+                        <p>"This year marked a milestone in research productivity and student numbers. To address diverse learning needs, I developed Ecotana—a prompt engineering toolkit that enabled students to turn any AI chatbot into a personal economics tutor. This provided a judgment-free, accessible learning space, especially for socially anxious students, and allowed for efficient identification of knowledge gaps, which I addressed in revision sessions. Data from these systems informed published research and institutional goals. The lesson: technology, when thoughtfully applied, can democratize access, foster skills development, and support both individual and institutional growth. Each year’s reflection and innovation has built a stronger, more responsive teaching practice."</p>
                 </div>
             </div>
         </div>
@@ -711,24 +753,30 @@ document.getElementById('imgModal').onclick = function(e) {
     </section>
 </body>
 <div id="imgModal" style="display:none; position:fixed; z-index:2147483647 !important; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); align-items:center; justify-content:center;">
-    <div id="imgModalFloating" style="background: #fff; border-radius: 18px; box-shadow: 0 8px 32px rgba(71,119,195,0.25), 0 2px 8px rgba(0,0,0,0.12); padding: 32px 32px 24px 32px; position: relative; display: flex; flex-direction: column; align-items: center; max-width: 95vw; max-height: 95vh;">
+    <div id="imgModalFloating" style="background: #fff; border-radius: 18px; box-shadow: 0 8px 32px rgba(71,119,195,0.25), 0 2px 8px rgba(0,0,0,0.12); padding: 32px 32px 24px 32px; position: relative; display: flex; flex-direction: column; align-items: center; max-width: 95vw; max-height: 95vh; z-index:2147483648 !important;">
         <span onclick="closeModal()" style="position:absolute; top:18px; right:24px; color:#4777C3; font-size:2.5rem; cursor:pointer; z-index:10001; background: #fff; border-radius: 50%; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.10);">&times;</span>
         <img id="modalImg" src="" alt="Full Size" style="max-width:70vw; max-height:70vh; border-radius:16px; box-shadow:0 8px 32px rgba(0,0,0,0.12); border: 3px solid #4777C3; background: #f8fafc;">
     </div>
 </div>
 <script>
 function expandImage(img) {
-    var modal = document.getElementById('imgModal');
-    var modalImg = document.getElementById('modalImg');
-    modal.style.display = 'flex';
-    modalImg.src = img.src;
+    // Find the closest evidence-thumbnails container and its year
+    var container = img.closest('[class^="evidence-thumbnails"]');
+    var yearMatch = container.className.match(/evidence-thumbnails(\d{4})/);
+    if (!yearMatch) return;
+    var year = yearMatch[1];
+    // Hide all expanded containers first
+    document.querySelectorAll('.expanded-thumbnail').forEach(function(el) {
+        el.style.display = 'none';
+    });
+    var expanded = document.getElementById('expandedThumbnail' + year);
+    var expandedImg = document.getElementById('expandedImg' + year);
+    expandedImg.src = img.src;
+    expanded.style.display = 'flex';
 }
-function closeModal() {
-    document.getElementById('imgModal').style.display = 'none';
-}
-// Optional: close modal on background click
-document.getElementById('imgModal').onclick = function(e) {
-    if (e.target === this) closeModal();
+function closeExpandedThumbnail(year) {
+    var expanded = document.getElementById('expandedThumbnail' + year);
+    if (expanded) expanded.style.display = 'none';
 }
 </script>
 </html>
