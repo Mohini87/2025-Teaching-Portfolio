@@ -251,15 +251,15 @@ header p {
     position: absolute;
     width: 40%;
     top: 0;
-}
+        width: 700px;
 
-.year-entry:nth-child(odd) .student-quotes {
-    right: 0;
-    padding-left: 60px;
-}
-
-.year-entry:nth-child(even) .student-quotes {
-    left: 0;
+        background: linear-gradient(135deg, var(--reflection-bg) 0%, #e0f2fe 100%);
+        border: 2px solid var(--primary-blue);
+        border-radius: 24px;
+        padding: 32px 36px 32px 36px;
+        box-shadow: 0 8px 32px rgba(71, 119, 195, 0.18);
+        text-align: left;
+        margin: 40px auto 40px auto;
     padding-right: 60px;
 }
 
@@ -397,20 +397,19 @@ header p {
     left: 50%;
     bottom: -400px;
     transform: translateX(-50%);
-    width: 600px;
-    max-width: 90%;
+    width: 900px;
+    max-width: 98%;
+    min-width: 320px;
     background: linear-gradient(135deg, var(--reflection-bg) 0%, #e0f2fe 100%);
     border: 2px solid var(--primary-blue);
-    border-radius: 20px;
-    padding: 25px 30px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 24px;
+    padding: 32px 36px 32px 36px;
+    box-shadow: 0 8px 32px rgba(71, 119, 195, 0.18);
     z-index: 2;
-    z-index: 2;
-    z-index: 2;
-    z-index: 2;
-    z-index: 2;
-    z-index: 2;
-    text-align: center;
+    text-align: left;
+    font-size: 1.08rem;
+    line-height: 1.8;
+    letter-spacing: 0.01em;
 }
 
 .reflection-bubble::before {
@@ -427,21 +426,45 @@ header p {
 
 .reflection-bubble h4 {
     color: var(--primary-blue);
-    font-size: 1.2rem;
-    margin-bottom: 15px;
+        font-size: 1.35rem;
+        margin-bottom: 18px;
+        text-align: center;
 }
 
-.reflection-bubble p {
-    font-style: italic;
-    color: #374151;
-    line-height: 1.6;
-    margin: 0;
+
+.reflection-bubble h5 {
+    font-size: 1.18rem;
+    color: #274472;
+    margin-top: 28px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    text-align: left;
+    border-bottom: 1.5px solid #90EE90;
+    padding-bottom: 4px;
+    display: block;
+    clear: both;
+}
+
+.reflection-bubble h5 {
+    font-size: 1.18rem;
+    color: #274472;
+    margin-top: 28px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    text-align: left;
+    border-bottom: 1.5px solid #90EE90;
+    padding-bottom: 4px;
+}
 }
 
 .reflection-bubble .quote-icon {
     color: var(--primary-blue);
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+        font-size: 1.7rem;
+        margin-bottom: 14px;
+        display: block;
+        text-align: center;
 }
 
 /* Lists styling */

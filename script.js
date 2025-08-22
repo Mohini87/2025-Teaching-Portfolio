@@ -1,64 +1,96 @@
 // Toggle visibility of alignment-container and reflection-bubble on year-marker click
 document.addEventListener('DOMContentLoaded', function() {
     const yearEntries = document.querySelectorAll('.year-entry');
-        yearEntries.forEach((entry, idx) => {
-            // Alternate .even class for zigzag
-            if (idx % 2 === 1) entry.classList.add('even');
-            else entry.classList.remove('even');
+    yearEntries.forEach((entry, idx) => {
+        // Alternate .even class for zigzag
+        if (idx % 2 === 1) entry.classList.add('even');
+        else entry.classList.remove('even');
 
-            // Add close buttons if not present
-            const align = entry.querySelector('.alignment-container');
-            if (align && !align.querySelector('.close-btn')) {
-                const btn = document.createElement('button');
-                btn.className = 'close-btn';
-                btn.innerHTML = '&times;';
-                btn.title = 'Close';
-                btn.onclick = e => {
-                    e.stopPropagation();
-                    entry.classList.remove('active-year');
-                };
-                align.insertBefore(btn, align.firstChild);
-            }
-            const reflect = entry.querySelector('.reflection-bubble');
-            if (reflect && !reflect.querySelector('.close-btn')) {
-                const btn = document.createElement('button');
-                btn.className = 'close-btn';
-                btn.innerHTML = '&times;';
-                btn.title = 'Close';
-                btn.onclick = e => {
-                    e.stopPropagation();
-                    entry.classList.remove('active-year');
-                };
-                reflect.insertBefore(btn, reflect.firstChild);
-            }
+        // Add close buttons if not present
+        const align = entry.querySelector('.alignment-container');
+        if (align && !align.querySelector('.close-btn')) {
+            const btn = document.createElement('button');
+            btn.className = 'close-btn';
+            btn.innerHTML = '&times;';
+            btn.title = 'Close';
+            btn.onclick = e => {
+                e.stopPropagation();
+                entry.classList.remove('active-year');
+            };
+            align.insertBefore(btn, align.firstChild);
+        }
+        const reflect = entry.querySelector('.reflection-bubble');
+        if (reflect && !reflect.querySelector('.close-btn')) {
+            const btn = document.createElement('button');
+            btn.className = 'close-btn';
+            btn.innerHTML = '&times;';
+            btn.title = 'Close';
+            btn.onclick = e => {
+                e.stopPropagation();
+                entry.classList.remove('active-year');
+            };
+            reflect.insertBefore(btn, reflect.firstChild);
+        }
 
-            const marker = entry.querySelector('.year-marker');
-            if (marker) {
-                marker.style.cursor = 'pointer';
-                marker.addEventListener('click', function() {
-                    if (entry.classList.contains('active-year')) {
-                        entry.classList.remove('active-year');
-                    } else {
-                        yearEntries.forEach(e => e.classList.remove('active-year'));
-                        entry.classList.add('active-year');
-                    }
-                });
-            }
-            // Also allow clicking the toggle-indicator to open/close
-            const indicator = entry.querySelector('.toggle-indicator');
-            if (indicator) {
-                indicator.style.cursor = 'pointer';
-                indicator.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    if (entry.classList.contains('active-year')) {
-                        entry.classList.remove('active-year');
-                    } else {
-                        yearEntries.forEach(e => e.classList.remove('active-year'));
-                        entry.classList.add('active-year');
-                    }
-                });
+        const marker = entry.querySelector('.year-marker');
+        if (marker) {
+            marker.style.cursor = 'pointer';
+            marker.addEventListener('click', function() {
+                if (entry.classList.contains('active-year')) {
+                    entry.classList.remove('active-year');
+                } else {
+                    yearEntries.forEach(e => e.classList.remove('active-year'));
+                    entry.classList.add('active-year');
+                }
+            });
+        }
+        // Also allow clicking the toggle-indicator to open/close
+        const indicator = entry.querySelector('.toggle-indicator');
+        if (indicator) {
+            indicator.style.cursor = 'pointer';
+            indicator.addEventListener('click', function(e) {
+                e.stopPropagation();
+                if (entry.classList.contains('active-year')) {
+                    entry.classList.remove('active-year');
+                } else {
+                    yearEntries.forEach(e => e.classList.remove('active-year'));
+                    entry.classList.add('active-year');
+                }
+            });
+        }
+    });
+
+    // Restore thumbnail expand logic for each year
+    window.expandImage = function(img) {
+        // Find the parent evidence container to determine the year
+        let parent = img.closest('[class^="evidence-thumbnails"]');
+        if (!parent) return;
+        let year = null;
+        // Class is like evidence-thumbnails2020, evidence-thumbnails2021, etc.
+        parent.classList.forEach(cls => {
+            if (cls.startsWith('evidence-thumbnails')) {
+                year = cls.replace('evidence-thumbnails', '');
             }
         });
+        if (!year) {
+            // fallback: try to extract from className string
+            const match = parent.className.match(/evidence-thumbnails(\d{4})/);
+            if (match) year = match[1];
+        }
+        if (!year) return;
+        const expanded = document.getElementById('expandedThumbnail' + year);
+        const expandedImg = document.getElementById('expandedImg' + year);
+        if (expanded && expandedImg) {
+            expandedImg.src = img.src;
+            expanded.style.display = 'flex';
+        }
+    };
+    window.closeExpandedThumbnail = function(year) {
+        const expanded = document.getElementById('expandedThumbnail' + year);
+        if (expanded) {
+            expanded.style.display = 'none';
+        }
+    };
 });
 document.addEventListener('DOMContentLoaded', function () {
     // Success Rate and Students Chart
