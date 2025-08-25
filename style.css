@@ -1,3 +1,409 @@
+/* Add 50px margin to all icons except quote icons */
+/* Extra spacing around all icons except quote icons */
+.fa:not(.fa-quote-left) {
+    margin: 50px !important;
+    padding: 30px !important;
+    box-sizing: content-box !important;
+    background: transparent !important;
+    display: inline-block !important;
+}
+.year-icon {
+    font-size: 12rem !important;
+    color: #4777C3;
+    opacity: 0.85;
+    position: absolute;
+    left: calc(50% + 100px);
+    top: 0;
+    margin: 0 !important;
+    padding: 50px !important;
+    z-index: 2;
+    pointer-events: none;
+    background: transparent !important;
+    box-sizing: content-box !important;
+}
+/* Timeline year icons: bold, large, and horizontally aligned */
+.year-icon {
+    font-size: 12rem !important; /* 500% bigger than 2.5rem */
+    color: #4777C3;
+    opacity: 0.85;
+    position: absolute;
+    left: 20vw;
+    top: 0;
+    margin: 0 !important;
+    z-index: 2;
+    pointer-events: none;
+}
+.year-entry {
+    position: relative;
+}
+/* --- Campus Innovation containers: 40% width and visible by default --- */
+.extra-container {
+    width: 40vw !important;
+    max-width: 40vw !important;
+    min-width: 320px;
+    display: block !important;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* --- Prevent overlap in 2021 vertical stack --- */
+.year-entry:nth-child(2) .year-content-group {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.year-entry:nth-child(2) .student-quotes {
+    margin-top: 40px !important;
+}
+/* --- Improved vertical distribution and 45% width for all timeline elements --- */
+.year-content, .content-card, .student-quotes, .alignment-container, .reflection-bubble {
+    width: 45vw !important;
+    max-width: 45vw !important;
+    min-width: 320px;
+    box-sizing: border-box;
+}
+.year-content > *, .content-card > *, .student-quotes > *, .alignment-container > *, .reflection-bubble > * {
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+}
+@media (max-width: 900px) {
+    .year-content, .content-card, .student-quotes, .alignment-container, .reflection-bubble {
+        width: 98vw !important;
+        max-width: 98vw !important;
+    }
+}
+/* --- Exaggerated Zig-Zag: Push elements 10% from center line --- */
+.year-entry:nth-child(odd) .year-content,
+.year-entry:nth-child(odd) .alignment-container,
+.year-entry:nth-child(odd) .reflection-bubble {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    transform: translateX(-10vw);
+}
+.year-entry:nth-child(odd) .content-card,
+.year-entry:nth-child(odd) .student-quotes {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    transform: translateX(10vw);
+}
+.year-entry:nth-child(even) .year-content,
+.year-entry:nth-child(even) .alignment-container,
+.year-entry:nth-child(even) .reflection-bubble {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    transform: translateX(10vw);
+}
+.year-entry:nth-child(even) .content-card,
+.year-entry:nth-child(even) .student-quotes {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    transform: translateX(-10vw);
+}
+@media (max-width: 900px) {
+    .year-entry .year-content,
+    .year-entry .content-card,
+    .year-entry .student-quotes,
+    .year-entry .alignment-container,
+    .year-entry .reflection-bubble {
+        transform: none !important;
+    }
+}
+/* --- Exaggerated Zig-Zag Timeline Layout --- */
+.year-entry {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 80px;
+    gap: 5vw;
+}
+.year-content-group {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+.year-entry:nth-child(odd) .year-content {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    align-items: flex-start;
+    text-align: left;
+}
+.year-entry:nth-child(odd) .content-card {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    text-align: right;
+}
+.year-entry:nth-child(even) .year-content {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    align-items: flex-end;
+    text-align: right;
+}
+.year-entry:nth-child(even) .content-card {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    text-align: left;
+}
+.student-quotes {
+    width: 45vw !important;
+    max-width: 45vw !important;
+    min-width: 320px;
+    margin: 0 0 0 0 !important;
+    box-sizing: border-box;
+}
+.year-entry:nth-child(odd) .student-quotes {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    text-align: right;
+}
+.year-entry:nth-child(even) .student-quotes {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    text-align: left;
+}
+.alignment-container, .reflection-bubble {
+    width: 45vw !important;
+    max-width: 45vw !important;
+    min-width: 320px;
+    margin-bottom: 20px !important;
+}
+.year-entry:nth-child(odd) .alignment-container, .year-entry:nth-child(odd) .reflection-bubble {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    text-align: left;
+}
+.year-entry:nth-child(even) .alignment-container, .year-entry:nth-child(even) .reflection-bubble {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    text-align: right;
+}
+@media (max-width: 900px) {
+    .year-entry, .year-content-group {
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+    .year-content, .student-quotes, .alignment-container, .reflection-bubble {
+        width: 98vw !important;
+        max-width: 98vw !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        text-align: left !important;
+    }
+}
+/* --- Timeline: All elements visible by default, equidistant, with spacing --- */
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+.year-entry {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 80px;
+    gap: 5vw;
+}
+.year-entry .year-marker {
+    flex: 0 0 80px;
+    align-self: flex-start;
+    margin: 0 2.5vw;
+}
+.year-content, .student-quotes, .alignment-container, .reflection-bubble {
+    width: 45vw !important;
+    max-width: 45vw !important;
+    min-width: 320px;
+    margin: 0 0 0 0 !important;
+    box-sizing: border-box;
+}
+.year-content, .student-quotes, .alignment-container, .reflection-bubble {
+    margin-bottom: 20px !important;
+}
+.year-content-group {
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+    width: 100%;
+    justify-content: space-between;
+}
+.alignment-container, .reflection-bubble {
+    display: block !important;
+    opacity: 1 !important;
+}
+.alignment-reflection-row {
+    display: flex !important;
+    flex-direction: row;
+    gap: 5vw;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+/* Add 20px space between stacked elements */
+.year-content > *, .student-quotes > *, .alignment-container > *, .reflection-bubble > * {
+    margin-bottom: 20px;
+}
+/* Responsive: stack on small screens */
+@media (max-width: 900px) {
+    .year-entry, .year-content-group, .alignment-reflection-row {
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+    .year-content, .student-quotes, .alignment-container, .reflection-bubble {
+        width: 98vw !important;
+        max-width: 98vw !important;
+    }
+}
+/* Hide elements when toggled (JS will add .hidden) */
+.hidden {
+    display: none !important;
+}
+/* --- Unified 45% width for timeline elements --- */
+.year-content,
+.student-quotes,
+.alignment-container,
+.reflection-bubble,
+.year-entry.active-year .alignment-container,
+.year-entry.active-year .reflection-bubble,
+.year-entry.active-year .alignment-reflection-row {
+        width: 45vw !important;
+        max-width: 45vw !important;
+        min-width: 320px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        box-sizing: border-box;
+}
+@media (max-width: 900px) {
+    .year-content,
+    .student-quotes,
+    .alignment-container,
+    .reflection-bubble,
+    .year-entry.active-year .alignment-container,
+    .year-entry.active-year .reflection-bubble,
+    .year-entry.active-year .alignment-reflection-row {
+        width: 98vw !important;
+        max-width: 98vw !important;
+    }
+}
+/* Move 2021 year marker down when 2020 alignment is toggled */
+.year-entry.move-marker-down .year-marker {
+    margin-top: 420px !important;
+}
+/* --- Side-by-side Alignment & Reflection for Active Year --- */
+.year-entry.active-year .alignment-reflection-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 32px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto 0 auto;
+}
+.year-entry.active-year .alignment-container,
+.year-entry.active-year .reflection-bubble {
+    display: block !important;
+    opacity: 1 !important;
+    width: 50%;
+    min-width: 320px;
+    max-width: 520px;
+    margin: 0;
+    position: relative;
+    box-sizing: border-box;
+}
+.year-entry.active-year .alignment-container {
+    order: 1;
+}
+.year-entry.active-year .reflection-bubble {
+    order: 2;
+}
+@media (max-width: 1100px) {
+    .year-entry.active-year .alignment-reflection-row {
+        flex-direction: column;
+        gap: 24px;
+        max-width: 98vw;
+    }
+    .year-entry.active-year .alignment-container,
+    .year-entry.active-year .reflection-bubble {
+        width: 100%;
+        max-width: 98vw;
+    }
+}
+/* --- End Side-by-side Alignment & Reflection --- */
+/* Ensure all student comment containers are the same width and centered */
+.student-quotes {
+    max-width: 700px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+/* Ensure all year content cards are the same width and centered */
+.content-card {
+    max-width: 700px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+/* Add 30px space above all evidence thumbnail containers */
+[class^="evidence-thumbnails"] {
+    margin-top: 30px !important;
+    padding-top: 90px;
+    position: relative;
+    z-index: 1;
+}
+/* Large gap between Campus Innovations 2020 and Lessons Learnt 2020 */
+.ci-ll-flexrow {
+    display: flex;
+    flex-direction: row;
+    gap: 400px;
+    margin-top: 18px;
+}
+/* Visually align Lessons Learnt 2020 box under student quotes with a vertical line */
+#lessons-learnt-2020.extra-container {
+    border-left: 4px solid #4777C3;
+    margin-left: 40px;
+}
+/* Ensure year-content stacks vertically and extra containers are full width */
+
+/* Ensure extra containers always stack vertically below student-quotes and year-content */
+.extra-container {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    clear: both;
+    position: relative;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.year-content {
+    display: block;
+    width: 100%;
+    position: relative;
+}
+/* Consistent style for all extra toggle buttons */
+.toggle-extra-btn {
+    margin: 18px 0 0 0;
+    padding: 8px 18px;
+    background: #4777C3;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(71,119,195,0.08);
+}
+.toggle-extra-btn:hover, .toggle-extra-btn:focus {
+    background: #365a8c;
+    outline: none;
+}
 /* Hide alignment-container and reflection-bubble by default, show on .active-year */
 .alignment-container,
 .reflection-bubble {
@@ -142,18 +548,39 @@ header p {
 }
 
 .charts-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    gap: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 32px;
     max-width: 1200px;
-    margin: 0 auto;
+    width: 100%;
+    margin: 0 auto 40px auto;
 }
 
 .chart-wrapper {
+    flex: 1 1 500px;
+    min-width: 320px;
+    max-width: 600px;
+    margin: 20px 0 0 0;
     background: #f8fafc;
-    padding: 30px;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+@media (max-width: 1100px) {
+    .charts-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 24px;
+    }
+    .chart-wrapper {
+        max-width: 100%;
+        margin: 0;
+    }
+}
 }
 
 .chart-wrapper h3 {
@@ -188,24 +615,30 @@ header p {
 .timeline-line {
     position: absolute;
     left: 50%;
-    top: 0;
+    /* Start below the 2020 year marker (80px marker + 20px margin) */
+    top: 100px;
     bottom: 0;
     width: 4px;
     background: linear-gradient(to bottom, var(--primary-blue), var(--accent-green));
     transform: translateX(-50%);
-    z-index: 1;
+    z-index: 0;
 }
 
 /* Year entries */
 .year-entry {
     position: relative;
+    z-index: 1;
     margin-bottom: 400px;
-    min-height: 400px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    width: 100%;
+    transition: margin-bottom 0.4s;
+}
+.year-entry.expanded-extra {
+    margin-bottom: 700px;
+}
+/* Ensure year-content is above the timeline line */
+.year-content {
+    position: relative;
+    z-index: 1;
+}
 }
 
 /* Year marker (circle on timeline) */
@@ -225,7 +658,7 @@ header p {
     font-size: 1.3rem;
     color: var(--primary-blue);
     transform: translateX(-50%);
-    z-index: 2;
+    z-index: 10;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -543,22 +976,14 @@ header p {
     
     .year-content,
     .student-quotes {
-        position: static;
-        width: 100%;
-        padding: 0 0 0 80px !important;
-        margin-bottom: 30px;
+        position: relative;
+        z-index: 1;
+        margin-bottom: 400px;
     }
-    
-    .reflection-bubble {
-        position: static;
-        transform: none;
-        margin: 40px auto 0 auto;
-        width: calc(100% - 80px);
-        margin-left: 80px;
-    }
-    
-    .reflection-bubble::before {
-        display: none;
+    /* Ensure year-content is above the timeline line */
+    .year-content {
+        position: relative;
+        z-index: 1;
     }
     
     .speech-bubble::before {
@@ -780,55 +1205,83 @@ header p {
   opacity: 1;
 }
 /* --- End Timeline Inline & Zigzag Layout --- */
-/* --- Year marker 20px above content --- */
+/* --- Year marker 20px above content by default, but below alignment/reflection when active --- */
 .year-entry {
-  flex-direction: column !important;
-  align-items: center !important;
+    flex-direction: column !important;
+    align-items: center !important;
 }
 .year-marker {
-  position: static !important;
-  margin-bottom: 20px !important;
-  left: unset !important;
-  top: unset !important;
-  transform: none !important;
+    position: static !important;
+    margin-bottom: 20px !important;
+    left: unset !important;
+    top: unset !important;
+    transform: none !important;
+    order: 0;
 }
 .year-entry .year-content,
 .year-entry .student-quotes {
-  margin-top: 0 !important;
+    margin-top: 0 !important;
 }
 .year-entry.even {
-  flex-direction: column !important;
+    flex-direction: column !important;
+}
+/* When active, move year-marker below alignment/reflection */
+.year-entry.active-year {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+.year-entry.active-year .alignment-container,
+.year-entry.active-year .reflection-bubble {
+    order: 1;
+}
+.year-entry.active-year .year-marker {
+    order: 2;
+    margin-top: 40px !important;
 }
 /* --- End year marker positioning --- */
 /* --- Restore zigzag inline layout for year content and comments --- */
+/* --- Vertical Timeline Layout --- */
 .year-entry {
-  display: flex !important;
-  flex-direction: row !important;
-  justify-content: center;
-  align-items: flex-start;
-  margin-bottom: 80px;
-  position: relative;
-  width: 100%;
+    display: block !important;
+    width: 100%;
+    margin-bottom: 80px;
+    position: relative;
 }
 .year-entry.even {
-  flex-direction: row-reverse !important;
+    display: block !important;
 }
 .year-marker {
-    position: absolute !important;
-    left: 50% !important;
-    top: -60px !important;
-    margin-bottom: 20px !important;
-    transform: translateX(-50%) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: static !important;
+    margin: 0 auto 20px auto !important;
+    left: unset !important;
+    top: unset !important;
+    transform: none !important;
+    width: 80px !important;
+    height: 80px !important;
+    font-size: 1.3rem !important;
+    font-weight: bold !important;
+    color: var(--primary-blue) !important;
+    background: white !important;
+    border: 4px solid var(--primary-blue) !important;
+    border-radius: 50% !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+    z-index: 2 !important;
 }
 .year-entry .year-content,
 .year-entry .student-quotes {
-    flex: 1 1 45%;
-    max-width: 45%;
-    min-width: 320px;
-    margin: 20px 40px 0 40px;
+    display: block !important;
+    width: 100%;
+    max-width: 1100px;
+    min-width: 0;
+    margin: 20px auto 0 auto;
     position: relative;
     z-index: 2;
 }
+/* --- End Vertical Timeline Layout --- */
 /* --- End zigzag inline layout --- */
 
 /* --- Flip card effect for toggling alignment-container and reflection-bubble --- */
@@ -836,18 +1289,17 @@ header p {
 .year-entry.active-year .student-quotes {
     display: none !important;
 }
-.year-entry.active-year .alignment-container {
-    display: flex !important;
-    opacity: 1 !important;
-    align-items: flex-start;
-    justify-content: center;
-    flex: 1 1 45%;
-    max-width: 45%;
-    min-width: 320px;
-    margin: 20px 40px 0 40px;
-    position: relative;
-    z-index: 2;
+.year-entry.active-year .alignment-container,
+.year-entry.active-year .reflection-bubble {
+    display: block;
+    opacity: 1;
+    animation: fadeIn 0.4s;
+    width: 90vw;
+    max-width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
 }
+/* Removed stray orphaned block causing CSS errors */
 .year-entry.active-year .reflection-bubble {
     display: flex !important;
     opacity: 1 !important;
@@ -883,4 +1335,3 @@ header p {
     background: linear-gradient(90deg, #274472 60%, #6fdc6f 100%);
     color: #fff;
     box-shadow: 0 4px 16px rgba(71, 119, 195, 0.18);
-}
