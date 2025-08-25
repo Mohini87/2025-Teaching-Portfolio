@@ -376,16 +376,18 @@
     width: 100%;
     box-sizing: border-box;
     clear: both;
-    position: relative;
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-}
-
-.year-content {
-    display: block;
-    width: 100%;
-    position: relative;
-}
+        gap: 12px; /* Increased gap for better visibility */
+        margin-top: 23px; /* Increased margin for better visibility */
+    }
+    .achievement-badges .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px; /* Increased gap for better visibility */
+        padding: 7px 14px; /* Increased padding for better visibility */
+        border-radius: 20px;
+        font-size: 0.92rem; /* Increased font size by 15% */
+        font-weight: 500;
+    }
 /* Consistent style for all extra toggle buttons */
 .toggle-extra-btn {
     margin: 18px 0 0 0;
