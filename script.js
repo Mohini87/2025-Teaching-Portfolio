@@ -302,7 +302,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         type: 'linear',
                         display: true,
                         position: 'left',
-                        beginAtZero: false,
+                        beginAtZero: true,
                         min: 0,
                         max: 100,
                         title: {
