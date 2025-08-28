@@ -283,7 +283,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 datasets: [{
                     type: 'line',
                     label: 'Average Success Rate (%)',
-                    data: [97.22, 96.43, 96.7, 88.51, 80.63],
+                    data: [97.22, 96.43, 96.7, 88.51, 87.62],
                     borderColor: '#4777C3',
                     backgroundColor: 'rgba(71, 119, 195, 0.2)',
                     borderWidth: 2,
